@@ -20,6 +20,8 @@ public class FirstPage extends javax.swing.JFrame {
      * Creates new form FirstPage
      */
 
+    public void printHellowWord(){
+    }
     public FirstPage() throws InterruptedException {
         initComponents();
      

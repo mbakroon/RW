@@ -21,6 +21,9 @@ public class FirstPage extends javax.swing.JFrame {
      */
 
     public void printHellowWord(){
+        System.out.println("Form.FirstPage.printHellowWord()");
+                System.out.println("Form.FirstPage.printHellowWord()");
+
     }
     public FirstPage() throws InterruptedException {
         initComponents();

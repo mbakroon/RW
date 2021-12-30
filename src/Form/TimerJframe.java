@@ -18,7 +18,6 @@ import javax.swing.ScrollPaneConstants;
  *
  * @author Mohammed Bakroon
  */
-
 public class TimerJframe extends javax.swing.JFrame {
 
     public int hour;
@@ -32,11 +31,9 @@ public class TimerJframe extends javax.swing.JFrame {
     ArrayList<ProgBarThread> ProgBarThreadsArray = new ArrayList<ProgBarThread>();
     private int numberOfFiles = 5;
     String key = "BitteEntsperren!";
-    int index =0;
+    int index = 0;
     int fileCounter = ReadFile.readFileCountPaths();
     private boolean isEncrypted[] = new boolean[fileCounter];
-
-    
 
     /**
      * Creates new form MainMenu
@@ -49,15 +46,19 @@ public class TimerJframe extends javax.swing.JFrame {
         startDecription();
 
     }
-    
-    int y = 0;
-    Thread tha;
-    public void fillZeroPercent(){
+
+    public void fillZeroPercent() {
         int min = 0;
+        int max = 100;
         for (progressBar ProgressBar : ProgressBarsArrayList) {
+            ProgressBar.getProgressBar().setMaximum(min);
+            ProgressBar.getProgressBar().setMaximum(max);
             ProgressBar.getProgressBar().setValue(0);
         }
     }
+    int y = 0;
+    Thread tha;
+
     public void OpenSideBar_ProgressBars() {
         if (y == 0) {
             jScrollPane_ProgressBars.setSize(210, y);
@@ -113,7 +114,7 @@ public class TimerJframe extends javax.swing.JFrame {
                             second = 60;
                             minute--;
                             ReadFile.readFileEncryptOneByOne(key, index);
-                            isEncrypted[index]=true;
+                            isEncrypted[index] = true;
                             index++;
                         }
                         if (minute == 0 && hour > 0) {
@@ -157,18 +158,18 @@ public class TimerJframe extends javax.swing.JFrame {
             //For every PrgressBar we need seperate Thread 
             ProgBarThread th = new ProgBarThread(progBar, b.getProgressBar());
 //            th.start();
-            System.out.println("Thred id: "+th.getId() +"Thread Prio" + th.getPriority());
+            System.out.println("Thred id: " + th.getId() + "Thread Prio" + th.getPriority());
             //added All Threds for ProgressBars to List to stopp them with SkipTimer
             ProgBarThreadsArray.add(th);
         }
-          //by using the forech loop the first ProgressBar will fill 
-          //and then jumb to the last one and fill forom botton to top 
+        //by using the forech loop the first ProgressBar will fill 
+        //and then jumb to the last one and fill forom botton to top 
 //        for (ProgBarThread th : ProgBarThreadsArray) {
 //            th.start();
 //        }
         //in this case the problem above fixed 
         ProgBarThreadsArray.get(0).start();
-        for (int i = ProgBarThreadsArray.size()-1; i > 0; i--) {
+        for (int i = ProgBarThreadsArray.size() - 1; i > 0; i--) {
             ProgBarThreadsArray.get(i).start();
         }
     }
@@ -180,12 +181,9 @@ public class TimerJframe extends javax.swing.JFrame {
         }
         return null;
     }
-    
-  
 
     //To Create Progress Bar with min and Max Value
     //alt name ProgBarCreator
-    
     class fillProgressBar {
 
         //To synchroniuzed Threds , one waite other one 
@@ -458,25 +456,24 @@ public class TimerJframe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //    int x = 210;
 //    Thread th;
- 
+
     private void skipTimer_ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_skipTimer_ButtonMouseClicked
 
-       
 
     }//GEN-LAST:event_skipTimer_ButtonMouseClicked
 
     private void jTextField_decrytingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_decrytingActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_decrytingActionPerformed
-   
+
     private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
         new MainMenu().setVisible(true);
         for (ProgBarThread th : ProgBarThreadsArray) {
             th.stop();
         }
         th_startTimer.stop();
-        progressBar.y=0;
-        
+        progressBar.y = 0;
+
         this.dispose();
     }//GEN-LAST:event_BackMouseClicked
 
@@ -486,7 +483,7 @@ public class TimerJframe extends javax.swing.JFrame {
     }//GEN-LAST:event_BackActionPerformed
 
     private void skipTimer_ButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_skipTimer_ButtonMousePressed
-         // to be unenabled to clicked the skipTimer Button morthan ones 
+        // to be unenabled to clicked the skipTimer Button morthan ones 
         //if that happen it will lead to resume the Thread from the interrupted point
         //and the secound will going under 0
         skipTimer_Button.setEnabled(false);
@@ -515,12 +512,12 @@ public class TimerJframe extends javax.swing.JFrame {
 
         }
         for (int i = 0; i < fileCounter; i++) {
-            if(isEncrypted[i]==false){
+            if (isEncrypted[i] == false) {
                 ReadFile.readFileEncryptOneByOne(key, i);
             }
         }
 
-        
+
     }//GEN-LAST:event_skipTimer_ButtonMousePressed
 
     private void Submit_ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Submit_ButtonMouseClicked
@@ -528,7 +525,8 @@ public class TimerJframe extends javax.swing.JFrame {
         for (ProgBarThread barThread : ProgBarThreadsArray) {
             barThread.stop();
         }
-//        th_startTimer.stop();
+        //Stop Timer with Enter Key 
+        th_startTimer.stop();
         //Decpytion
         if (evt.getSource() == Submit_Button) {
             String input = jTextField_decryting.getText();
@@ -538,7 +536,6 @@ public class TimerJframe extends javax.swing.JFrame {
             }
         }
         fillZeroPercent();
-
 
 
     }//GEN-LAST:event_Submit_ButtonMouseClicked
@@ -606,5 +603,5 @@ public class TimerJframe extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_decryting;
     private javax.swing.JLabel skipTimer_Button;
     // End of variables declaration//GEN-END:variables
-   
+
 }

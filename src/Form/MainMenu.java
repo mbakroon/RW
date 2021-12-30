@@ -17,7 +17,7 @@ public class MainMenu extends javax.swing.JFrame {
     /**
      * Creates new form MainMenu
      */
-
+    
     public MainMenu() {
         initComponents();
         this.setResizable(false);

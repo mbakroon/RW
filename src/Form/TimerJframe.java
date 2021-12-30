@@ -261,6 +261,7 @@ public class TimerJframe extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setUndecorated(true);
 
         MainJPanel.setBackground(new java.awt.Color(204, 204, 255));
         MainJPanel.setMinimumSize(new java.awt.Dimension(1000, 625));

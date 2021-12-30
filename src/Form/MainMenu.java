@@ -188,7 +188,7 @@ public class MainMenu extends javax.swing.JFrame {
         ReportLabelSidebar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         ReportLabelSidebar.setForeground(new java.awt.Color(255, 255, 255));
         ReportLabelSidebar.setText("Report");
-        ReportLabelSidebar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        ReportLabelSidebar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ReportLabelSidebar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ReportLabelSidebarMouseClicked(evt);

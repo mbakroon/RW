@@ -13,6 +13,7 @@ import javax.swing.JProgressBar;
  * @author m.bakroon
  */
 public class progressBar {
+    // This is the progressbar class
    private JProgressBar b ;
    private JLabel l;
    public static int x=40; 

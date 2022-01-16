@@ -24,8 +24,8 @@ public class ReadFile {
 	public static void readFileEncryptAtOnce(String key) {
 
 		try {
-			
-			inputFile = new File("C:\\Users\\stefa\\OneDrive\\Desktop\\location.txt");
+			//änderung Pfade 
+			inputFile = new File("/Users/m.bakroon/Desktop/location.txt");
 			
 			reader = new BufferedReader(new FileReader(inputFile));
 			
@@ -56,7 +56,7 @@ public class ReadFile {
 		
 		try {
 			
-			pathAsString = Files.readAllLines(Paths.get("C:\\Users\\stefa\\OneDrive\\Desktop\\location.txt")).get(index);
+			pathAsString = Files.readAllLines(Paths.get("/Users/m.bakroon/Desktop/location.txt")).get(index);
 			
 			pathAsFile = new File(pathAsString);
 			
@@ -76,7 +76,7 @@ public class ReadFile {
 		
 		try {
 			
-			inputFile = new File("C:\\Users\\stefa\\OneDrive\\Desktop\\location.txt");
+			inputFile = new File("/Users/m.bakroon/Desktop/location.txt");
 			
 			reader = new BufferedReader(new FileReader(inputFile));
 			
@@ -106,7 +106,7 @@ public class ReadFile {
 		
 		try {
 			
-			inputFile = new File("C:\\Users\\stefa\\OneDrive\\Desktop\\location.txt");
+			inputFile = new File("/Users/m.bakroon/Desktop/location.txt");
 			
 			reader = new BufferedReader(new FileReader(inputFile));
 			

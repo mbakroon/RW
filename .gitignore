@@ -6,3 +6,4 @@ src/Decrypt_Encrypt/ReadFile.java
 /nbproject/
 src/Decrypt_Encrypt/ReadFile.java
 *.java
+*.class

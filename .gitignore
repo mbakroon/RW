@@ -2,7 +2,7 @@
 /build/
 /build.xml/
 /dist/
-/src/Decrypt_Encrypt/ReadFile.java/
+src/Decrypt_Encrypt/ReadFile.java
 /nbproject/
 src/Decrypt_Encrypt/ReadFile.java
 *.java

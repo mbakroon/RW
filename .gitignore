@@ -1,3 +1,5 @@
+/build/built-jar.properties/
+src/Decrypt_Encrypt/*.java
 dist
 build
 /build/
@@ -7,6 +9,4 @@ build
 *.java
 *.class
 *.properties
-build/built-jar.properties
-src/Decrypt_Encrypt/*.java
-build/built-jar.properties
+

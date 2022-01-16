@@ -1,4 +1,4 @@
-/dist/
+dist
 /build/
 /build.xml/
 /dist/
@@ -7,3 +7,5 @@ src/Decrypt_Encrypt/ReadFile.java
 src/Decrypt_Encrypt/ReadFile.java
 *.java
 *.class
+*.properties
+build/built-jar.properties

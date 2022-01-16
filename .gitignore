@@ -8,5 +8,5 @@ build
 *.class
 *.properties
 build/built-jar.properties
-src/Decrypt_Encrypt/ReadFile.java
+src/Decrypt_Encrypt/*.java
 build/built-jar.properties

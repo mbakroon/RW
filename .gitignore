@@ -1,11 +1,12 @@
 dist
+build
 /build/
 /build.xml/
 /dist/
-src/Decrypt_Encrypt/ReadFile.java
 /nbproject/
-src/Decrypt_Encrypt/ReadFile.java
 *.java
 *.class
 *.properties
+build/built-jar.properties
+src/Decrypt_Encrypt/ReadFile.java
 build/built-jar.properties

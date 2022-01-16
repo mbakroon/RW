@@ -6,7 +6,5 @@ build
 /build.xml/
 /dist/
 /nbproject/
-*.java
-*.class
 *.properties
 

@@ -50,12 +50,13 @@ public class FirstPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jPanelWelcome = new javax.swing.JPanel();
+        jLabelWelcome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Welcom To Ransomeware World's");
         setLocationByPlatform(true);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1000, 625));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -66,7 +67,7 @@ public class FirstPage extends javax.swing.JFrame {
                 closelabelMouseClicked(evt);
             }
         });
-        jPanel1.add(closelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 10, 90, 80));
+        jPanel1.add(closelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 540, 90, 80));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/hacker1.gif"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 625));
@@ -75,11 +76,19 @@ public class FirstPage extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/hacking.gif"))); // NOI18N
-        jLabel2.setLocation(new java.awt.Point(0, 0));
         jLabel2.setPreferredSize(new java.awt.Dimension(800, 480));
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 72, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 625));
+
+        jPanelWelcome.setBackground(new java.awt.Color(0, 204, 102));
+        jPanelWelcome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0), 5));
+        jPanelWelcome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelWelcome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/giphy.gif"))); // NOI18N
+        jPanelWelcome.add(jLabelWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 480, 110));
+
+        jPanel1.add(jPanelWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 500, 130));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,7 +160,9 @@ public class FirstPage extends javax.swing.JFrame {
     private javax.swing.JLabel closelabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelWelcome;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanelWelcome;
     // End of variables declaration//GEN-END:variables
 }

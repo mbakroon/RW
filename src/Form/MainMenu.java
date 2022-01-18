@@ -76,6 +76,7 @@ public class MainMenu extends javax.swing.JFrame {
         labelStartseiteTitle = new javax.swing.JLabel();
         panelStartseiteText = new javax.swing.JPanel();
         labelStartseiteText = new javax.swing.JLabel();
+        jEditorPane1 = new javax.swing.JEditorPane();
         dashboardLabel = new javax.swing.JLabel();
         Demo6Stunde = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -336,6 +337,7 @@ public class MainMenu extends javax.swing.JFrame {
         labelStartseiteText.setForeground(new java.awt.Color(255, 0, 0));
         labelStartseiteText.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 5, 0, 0));
         panelStartseiteText.add(labelStartseiteText, java.awt.BorderLayout.PAGE_START);
+        panelStartseiteText.add(jEditorPane1, java.awt.BorderLayout.CENTER);
 
         Dashboard.add(panelStartseiteText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 790, 440));
 
@@ -567,6 +569,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel dashboardLabel;
     private javax.swing.JLabel demo_six_hour;
     private javax.swing.JPanel dynamicPanel;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;

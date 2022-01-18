@@ -19,6 +19,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form MainMenu
+     * hallo Stefan 18.01
      */
     // This is mainmenu class
     public MainMenu() {

@@ -1,1 +1,11 @@
 
+/build/built-jar.properties/
+src/Decrypt_Encrypt/*.java
+dist
+build
+/build/
+/build.xml/
+/dist/
+/nbproject/
+*.properties
+.DS_Store

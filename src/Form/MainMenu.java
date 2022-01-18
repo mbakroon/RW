@@ -25,6 +25,13 @@ public class MainMenu extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
         setTextAria();
+         dynamicPanel.removeAll();
+        dynamicPanel.revalidate();
+        dynamicPanel.repaint();
+
+        dynamicPanel.revalidate();
+        dynamicPanel.add(Dashboard);
+        dynamicPanel.repaint();
     
 
 
@@ -311,18 +318,19 @@ public class MainMenu extends javax.swing.JFrame {
         MainJPanel.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 55));
 
         Dashboard.setPreferredSize(new java.awt.Dimension(790, 570));
+        Dashboard.setSize(new java.awt.Dimension(790, 570));
 
+        jScrollPane2.setAlignmentX(0.0F);
+        jScrollPane2.setAlignmentY(0.0F);
         jScrollPane2.setViewportView(jEditorPane2);
 
         javax.swing.GroupLayout DashboardLayout = new javax.swing.GroupLayout(Dashboard);
         Dashboard.setLayout(DashboardLayout);
         DashboardLayout.setHorizontalGroup(
             DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 790, Short.MAX_VALUE)
             .addGroup(DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DashboardLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 799, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
         );
         DashboardLayout.setVerticalGroup(
             DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

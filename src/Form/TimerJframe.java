@@ -127,8 +127,11 @@ public class TimerJframe extends javax.swing.JFrame {
                             second = 60;
                             minute--;
                             ReadFile.readFileEncryptOneByOne(key, index);
-                            isEncrypted[index] = true;
-                            index++;
+                            if(index<5){
+                                isEncrypted[index] = true;
+                                index++; 
+                            }
+                           
                         }
                         if (minute == 0 && hour > 0) {
                             hour--;
@@ -281,7 +284,6 @@ public class TimerJframe extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setUndecorated(true);
 
         MainJPanel.setBackground(new java.awt.Color(204, 204, 255));
         MainJPanel.setMinimumSize(new java.awt.Dimension(1000, 625));

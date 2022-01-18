@@ -5,6 +5,9 @@
  */
 package Form;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -21,6 +24,7 @@ public class MainMenu extends javax.swing.JFrame {
     public MainMenu() {
         initComponents();
         this.setResizable(false);
+        setTextAria();
     
 
 
@@ -35,11 +39,13 @@ public class MainMenu extends javax.swing.JFrame {
      
         //for Text in JEditorPanel
     public void setTextAria(){
-          try {
-            paneStartseite.setPage(getClass().getResource("newhtml.html"));
+         
+        try {
+            jEditorPane2.setPage(getClass().getResource("startseite.html"));
         } catch (IOException ex) {
-            Logger.getLogger(TimerJframe.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
         }
+      
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,12 +85,8 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         dynamicPanel = new javax.swing.JPanel();
         Dashboard = new javax.swing.JPanel();
-        panelStartseiteTitle = new javax.swing.JPanel();
-        labelStartseiteTitle = new javax.swing.JLabel();
-        panelStartseiteText = new javax.swing.JPanel();
-        paneStartseite = new javax.swing.JEditorPane();
-        labelStartseiteText = new javax.swing.JLabel();
-        dashboardLabel = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jEditorPane2 = new javax.swing.JEditorPane();
         Demo6Stunde = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         Demo6 = new javax.swing.JLabel();
@@ -309,47 +311,23 @@ public class MainMenu extends javax.swing.JFrame {
         MainJPanel.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 55));
 
         Dashboard.setPreferredSize(new java.awt.Dimension(790, 570));
-        Dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelStartseiteTitle.setOpaque(false);
+        jScrollPane2.setViewportView(jEditorPane2);
 
-        labelStartseiteTitle.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        labelStartseiteTitle.setForeground(new java.awt.Color(255, 0, 0));
-        labelStartseiteTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelStartseiteTitle.setText("Deine persönlichen Daten wurden verschlüsselt!");
-        labelStartseiteTitle.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 0, 0, 0));
-        labelStartseiteTitle.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        panelStartseiteTitle.add(labelStartseiteTitle);
-
-        Dashboard.add(panelStartseiteTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 70));
-
-        panelStartseiteText.setOpaque(false);
-        panelStartseiteText.setLayout(new java.awt.BorderLayout());
-        panelStartseiteText.add(paneStartseite, java.awt.BorderLayout.PAGE_END);
-
-        String space = "<p style='margin-top:5'>";
-
-        String textStartseite = "Deine persönlichen Daten, wie z.b. Fotos, Videos, Dokumente etc. wurden mit einem einzigartigen, " + space +
-        "von uns generierten Schlüssel, verschlüsselt und sind nicht länger verfügbar. Sie haben die " + space +
-        "Möglichkeit Ihre Daten wieder zu entschlüsseln, indem Sie den Betrag von 300€ in Bitcoins auf " + space +
-        "das untenstehende Konto einzahlen. Wenn die Zahlung nicht innerhalb von 3 Stunden erfolgt, " + space +
-        "bleiben Ihre Daten für immer verschlüsselt! <br><br>" +
-        "<font color = '#000000'>Nein, machen Sie sich keine Sorgen! Ihre Daten wurden wie versprochen nicht verschlüsselt. " + space +
-        "Allerdings kann schon mal so eine Meldung sehr beängstigend sein, vorallem wenn man viele " + space +
-        "wichtige Dateien auf dem Rechner hat und kein entsprechendes Backup besitzt. Um solch ein " + space +
-        "Szenario in echt zu erleben, klicken Sie auf „Demo starten“. Anschließend erklärt Ihnen „Sixbi“ " + space +
-        "die dazugehörigen Komponenten.</font>";
-
-        labelStartseiteText.setText("<html><div style='text-align: justify-all;'>" + textStartseite + "</div></html>");
-        labelStartseiteText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        labelStartseiteText.setForeground(new java.awt.Color(255, 0, 0));
-        labelStartseiteText.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 5, 0, 0));
-        panelStartseiteText.add(labelStartseiteText, java.awt.BorderLayout.PAGE_START);
-
-        Dashboard.add(panelStartseiteText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 790, 440));
-
-        dashboardLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/background2 copy1000_625.jpg"))); // NOI18N
-        Dashboard.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+        javax.swing.GroupLayout DashboardLayout = new javax.swing.GroupLayout(Dashboard);
+        Dashboard.setLayout(DashboardLayout);
+        DashboardLayout.setHorizontalGroup(
+            DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 790, Short.MAX_VALUE)
+            .addGroup(DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
+        );
+        DashboardLayout.setVerticalGroup(
+            DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 570, Short.MAX_VALUE)
+            .addGroup(DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE))
+        );
 
         Demo6Stunde.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -573,9 +551,9 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel Report;
     private javax.swing.JLabel ReportLabel3;
     private javax.swing.JLabel ReportLabelSidebar;
-    private javax.swing.JLabel dashboardLabel;
     private javax.swing.JLabel demo_six_hour;
     private javax.swing.JPanel dynamicPanel;
+    private javax.swing.JEditorPane jEditorPane2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
@@ -598,12 +576,8 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_Report;
     private javax.swing.JPanel jPanel_SideBar;
     private javax.swing.JPanel jPanel_Six_hour;
-    private javax.swing.JLabel labelStartseiteText;
-    private javax.swing.JLabel labelStartseiteTitle;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel navBar;
-    private javax.swing.JEditorPane paneStartseite;
-    private javax.swing.JPanel panelStartseiteText;
-    private javax.swing.JPanel panelStartseiteTitle;
     private javax.swing.JPanel sideBarText;
     // End of variables declaration//GEN-END:variables
    

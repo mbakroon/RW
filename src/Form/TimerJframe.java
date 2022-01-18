@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//pegah_Tset_sonntag
-//moh Test 2022
-//maxim test
+
 package Form;
 
 import Decrypt_Encrypt.ReadFile;
+import java.io.IOException;
 import static java.lang.Thread.sleep;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -17,14 +16,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.ScrollPaneConstants;
 
-//test test testStefan 22021
-//asdkalksdjkasljdlksa
-// test maxim sonntag abend
-// test maxim2
 /**
  *
  * @author Mohammed Bakroon
  */
+
+
 public class TimerJframe extends javax.swing.JFrame {
 
     public int hour;
@@ -51,7 +48,16 @@ public class TimerJframe extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
         startDecription();
+        setTextAria();
 
+    }
+    //for Text in JEditorPanel
+    public void setTextAria(){
+          try {
+            jEditorPane1.setPage(getClass().getResource("newhtml.html"));
+        } catch (IOException ex) {
+            Logger.getLogger(TimerJframe.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void fillZeroPercent() {
@@ -246,7 +252,6 @@ public class TimerJframe extends javax.swing.JFrame {
     private void initComponents() {
 
         MainJPanel = new javax.swing.JPanel();
-        TextBox = new javax.swing.JLabel();
         jPanel_TimerPanel = new javax.swing.JPanel();
         jScrollPane_ProgressBars = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
@@ -263,6 +268,9 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
         Background_TimerPanel = new javax.swing.JLabel();
         Hack_background = new javax.swing.JLabel();
 
@@ -274,13 +282,6 @@ public class TimerJframe extends javax.swing.JFrame {
         MainJPanel.setMinimumSize(new java.awt.Dimension(1000, 625));
         MainJPanel.setPreferredSize(new java.awt.Dimension(1000, 625));
         MainJPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        TextBox.setBackground(new java.awt.Color(204, 0, 0));
-        TextBox.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        TextBox.setForeground(new java.awt.Color(204, 0, 0));
-        TextBox.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        TextBox.setText("You Have a specefic Time to enter the Valid Key , After That you will not be able to decrypt your files again , the skip the timer to 10 secound too see what will haben , click on the button .  ");
-        MainJPanel.add(TextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 290, 230));
 
         jPanel_TimerPanel.setPreferredSize(new java.awt.Dimension(1000, 625));
         jPanel_TimerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -306,7 +307,7 @@ public class TimerJframe extends javax.swing.JFrame {
 
         Submit_Button.setBackground(java.awt.Color.lightGray);
         Submit_Button.setText("Submit");
-        Submit_Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Submit_Button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Submit_Button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Submit_ButtonMouseClicked(evt);
@@ -322,7 +323,7 @@ public class TimerJframe extends javax.swing.JFrame {
         jTextField_decryting.setBackground(new java.awt.Color(204, 204, 204));
         jTextField_decryting.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField_decryting.setText("Enter The Secret Key ");
-        jTextField_decryting.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField_decryting.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextField_decryting.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_decrytingActionPerformed(evt);
@@ -371,7 +372,7 @@ public class TimerJframe extends javax.swing.JFrame {
         StartTimer_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-anfang-48.png"))); // NOI18N
 
         skipTimer_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-überspringen-50.png"))); // NOI18N
-        skipTimer_Button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        skipTimer_Button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         skipTimer_Button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 skipTimer_ButtonMouseClicked(evt);
@@ -438,6 +439,22 @@ public class TimerJframe extends javax.swing.JFrame {
         );
 
         jPanel_TimerPanel.add(jPanel_timerBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 290, 150));
+
+        String strHTML = "<div style= color:red ; font-size. 40px>Was passiert mit meinem Computer</div>";
+        jScrollPane1.setViewportView(jEditorPane1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
+        );
+
+        jPanel_TimerPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 370, 450));
 
         Background_TimerPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/timerbackgroundhack copy.gif"))); // NOI18N
         Background_TimerPanel.setText("jLabel3");
@@ -550,6 +567,7 @@ public class TimerJframe extends javax.swing.JFrame {
 
     private void Submit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Submit_ButtonActionPerformed
         // TODO add your handling code here:
+      
     }//GEN-LAST:event_Submit_ButtonActionPerformed
 
     /**
@@ -596,7 +614,7 @@ public class TimerJframe extends javax.swing.JFrame {
     private javax.swing.JPanel MainJPanel;
     private javax.swing.JLabel StartTimer_Button;
     private javax.swing.JButton Submit_Button;
-    private javax.swing.JLabel TextBox;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
@@ -605,8 +623,10 @@ public class TimerJframe extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel_minute;
     public javax.swing.JLabel jLabel_seconds;
     public javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel_TimerPanel;
     private javax.swing.JPanel jPanel_timerBox;
+    private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane_ProgressBars;
     private javax.swing.JTextField jTextField_decryting;
     private javax.swing.JLabel skipTimer_Button;

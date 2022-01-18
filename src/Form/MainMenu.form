@@ -140,7 +140,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Demo 6 Stunde"/>
+                    <Property name="text" type="java.lang.String" value="Demo starten"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Hand Cursor"/>
                     </Property>
@@ -193,7 +193,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Dashboard"/>
+                    <Property name="text" type="java.lang.String" value="Startseite"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Hand Cursor"/>
                     </Property>
@@ -377,7 +377,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Ransomeware Program"/>
+                <Property name="text" type="java.lang.String" value="Ransomware Program"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -512,7 +512,7 @@
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="navBar"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ransomeware Interaktive Lehreinleitung "/>
+                <Property name="text" type="java.lang.String" value="Ransomware Interaktive Lernumgebung "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel25">
@@ -566,19 +566,76 @@
                 <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel21">
+                <Container class="javax.swing.JPanel" name="panelStartseiteTitle">
                   <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Lucida Grande" size="48" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Dashboard"/>
+                    <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="380" y="180" width="410" height="190"/>
+                      <AbsoluteConstraints x="0" y="0" width="790" height="70"/>
                     </Constraint>
                   </Constraints>
-                </Component>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="labelStartseiteTitle">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Lucida Grande" size="24" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="Deine pers&#xf6;nlichen Daten wurden verschl&#xfc;sselt!"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="0" left="0" right="0" top="10"/>
+                          </Border>
+                        </Property>
+                        <Property name="horizontalTextPosition" type="int" value="2"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="panelStartseiteText">
+                  <Properties>
+                    <Property name="opaque" type="boolean" value="false"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="790" height="440"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="labelStartseiteText">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="0" left="5" right="0" top="0"/>
+                          </Border>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel()"/>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="String space = &quot;&lt;p style=&apos;margin-top:5&apos;&gt;&quot;;&#xa;&#xa;String textStartseite = &quot;Deine pers&#xf6;nlichen Daten, wie z.b. Fotos, Videos, Dokumente etc. wurden mit einem einzigartigen, &quot; + space +&#xa;                        &quot;von uns generierten Schl&#xfc;ssel, verschl&#xfc;sselt und sind nicht l&#xe4;nger verf&#xfc;gbar. Sie haben die &quot; + space +&#xa;                        &quot;M&#xf6;glichkeit Ihre Daten wieder zu entschl&#xfc;sseln, indem Sie den Betrag von 300&#x20ac; in Bitcoins auf &quot; + space +&#xa;                        &quot;das untenstehende Konto einzahlen. Wenn die Zahlung nicht innerhalb von 3 Stunden erfolgt, &quot; + space +&#xa;                        &quot;bleiben Ihre Daten f&#xfc;r immer verschl&#xfc;sselt! &lt;br&gt;&lt;br&gt;&quot; +&#xa;                        &quot;&lt;font color = &apos;#000000&apos;&gt;Nein, machen Sie sich keine Sorgen! Ihre Daten wurden wie versprochen nicht verschl&#xfc;sselt. &quot; + space +&#xa;                        &quot;Allerdings kann schon mal so eine Meldung sehr be&#xe4;ngstigend sein, vorallem wenn man viele &quot; + space +&#xa;                        &quot;wichtige Dateien auf dem Rechner hat und kein entsprechendes Backup besitzt. Um solch ein &quot; + space +&#xa;                        &quot;Szenario in echt zu erleben, klicken Sie auf &#x201e;Demo starten&#x201c;. Anschlie&#xdf;end erkl&#xe4;rt Ihnen &#x201e;Sixbi&#x201c; &quot; + space +&#xa;                        &quot;die dazugeh&#xf6;rigen Komponenten.&lt;/font&gt;&quot;;&#xa;&#xa;&#xa;labelStartseiteText.setText(&quot;&lt;html&gt;&lt;div style=&apos;text-align: justify-all;&apos;&gt;&quot; + textStartseite + &quot;&lt;/div&gt;&lt;/html&gt;&quot;);"/>
+                      </AuxValues>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                          <BorderConstraints direction="First"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                </Container>
                 <Component class="javax.swing.JLabel" name="dashboardLabel">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">

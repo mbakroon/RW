@@ -72,7 +72,10 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         dynamicPanel = new javax.swing.JPanel();
         Dashboard = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
+        panelStartseiteTitle = new javax.swing.JPanel();
+        labelStartseiteTitle = new javax.swing.JLabel();
+        panelStartseiteText = new javax.swing.JPanel();
+        labelStartseiteText = new javax.swing.JLabel();
         dashboardLabel = new javax.swing.JLabel();
         Demo6Stunde = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -127,7 +130,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         demo_six_hour.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         demo_six_hour.setForeground(new java.awt.Color(255, 255, 255));
-        demo_six_hour.setText("Demo 6 Stunde");
+        demo_six_hour.setText("Demo starten");
         demo_six_hour.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         demo_six_hour.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -147,7 +150,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         DashboardLabelSideBar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         DashboardLabelSideBar.setForeground(new java.awt.Color(255, 255, 255));
-        DashboardLabelSideBar.setText("Dashboard");
+        DashboardLabelSideBar.setText("Startseite");
         DashboardLabelSideBar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DashboardLabelSideBar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -221,7 +224,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Ransomeware Program");
+        jLabel14.setText("Ransomware Program");
         jPanel_SideBar.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 486, 160, 20));
 
         jLabel15.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
@@ -268,7 +271,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel24.setLabelFor(navBar);
-        jLabel24.setText("Ransomeware Interaktive Lehreinleitung ");
+        jLabel24.setText("Ransomware Interaktive Lernumgebung ");
 
         jLabel25.setForeground(new java.awt.Color(204, 0, 0));
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/thief-hacker-locked-victim-compu.jpg"))); // NOI18N
@@ -300,9 +303,41 @@ public class MainMenu extends javax.swing.JFrame {
         Dashboard.setPreferredSize(new java.awt.Dimension(790, 570));
         Dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel21.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
-        jLabel21.setText("Dashboard");
-        Dashboard.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 410, 190));
+        panelStartseiteTitle.setOpaque(false);
+
+        labelStartseiteTitle.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        labelStartseiteTitle.setForeground(new java.awt.Color(255, 0, 0));
+        labelStartseiteTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelStartseiteTitle.setText("Deine persönlichen Daten wurden verschlüsselt!");
+        labelStartseiteTitle.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 0, 0, 0));
+        labelStartseiteTitle.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        panelStartseiteTitle.add(labelStartseiteTitle);
+
+        Dashboard.add(panelStartseiteTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 70));
+
+        panelStartseiteText.setOpaque(false);
+        panelStartseiteText.setLayout(new java.awt.BorderLayout());
+
+        String space = "<p style='margin-top:5'>";
+
+        String textStartseite = "Deine persönlichen Daten, wie z.b. Fotos, Videos, Dokumente etc. wurden mit einem einzigartigen, " + space +
+        "von uns generierten Schlüssel, verschlüsselt und sind nicht länger verfügbar. Sie haben die " + space +
+        "Möglichkeit Ihre Daten wieder zu entschlüsseln, indem Sie den Betrag von 300€ in Bitcoins auf " + space +
+        "das untenstehende Konto einzahlen. Wenn die Zahlung nicht innerhalb von 3 Stunden erfolgt, " + space +
+        "bleiben Ihre Daten für immer verschlüsselt! <br><br>" +
+        "<font color = '#000000'>Nein, machen Sie sich keine Sorgen! Ihre Daten wurden wie versprochen nicht verschlüsselt. " + space +
+        "Allerdings kann schon mal so eine Meldung sehr beängstigend sein, vorallem wenn man viele " + space +
+        "wichtige Dateien auf dem Rechner hat und kein entsprechendes Backup besitzt. Um solch ein " + space +
+        "Szenario in echt zu erleben, klicken Sie auf „Demo starten“. Anschließend erklärt Ihnen „Sixbi“ " + space +
+        "die dazugehörigen Komponenten.</font>";
+
+        labelStartseiteText.setText("<html><div style='text-align: justify-all;'>" + textStartseite + "</div></html>");
+        labelStartseiteText.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelStartseiteText.setForeground(new java.awt.Color(255, 0, 0));
+        labelStartseiteText.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 5, 0, 0));
+        panelStartseiteText.add(labelStartseiteText, java.awt.BorderLayout.PAGE_START);
+
+        Dashboard.add(panelStartseiteText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 790, 440));
 
         dashboardLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/background2 copy1000_625.jpg"))); // NOI18N
         Dashboard.add(dashboardLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
@@ -537,7 +572,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
@@ -555,7 +589,11 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_Report;
     private javax.swing.JPanel jPanel_SideBar;
     private javax.swing.JPanel jPanel_Six_hour;
+    private javax.swing.JLabel labelStartseiteText;
+    private javax.swing.JLabel labelStartseiteTitle;
     private javax.swing.JPanel navBar;
+    private javax.swing.JPanel panelStartseiteText;
+    private javax.swing.JPanel panelStartseiteTitle;
     private javax.swing.JPanel sideBarText;
     // End of variables declaration//GEN-END:variables
    

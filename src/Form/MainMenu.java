@@ -334,8 +334,11 @@ public class MainMenu extends javax.swing.JFrame {
 
         Dashboard.setPreferredSize(new java.awt.Dimension(790, 570));
 
+        jScrollPane2.setBorder(null);
         jScrollPane2.setAlignmentX(0.0F);
         jScrollPane2.setAlignmentY(0.0F);
+
+        jEditorPane2.setBorder(null);
         jScrollPane2.setViewportView(jEditorPane2);
 
         javax.swing.GroupLayout DashboardLayout = new javax.swing.GroupLayout(Dashboard);

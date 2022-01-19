@@ -321,6 +321,9 @@
                   <Color blue="4e" green="46" red="36" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel_ReportMouseClicked"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="190" width="210" height="40"/>
@@ -592,7 +595,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Members" min="-2" pref="790" max="-2" attributes="0"/>
                   <Component id="Dashboard" min="-2" max="-2" attributes="0"/>
-                  <Component id="Report" min="-2" max="-2" attributes="0"/>
+                  <Component id="Report1" min="-2" max="-2" attributes="0"/>
                   <Component id="Collections" min="-2" pref="790" max="-2" attributes="0"/>
                   <Component id="Demo6Stunde" min="-2" max="-2" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -607,7 +610,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Members" min="-2" max="-2" attributes="0"/>
                   <Component id="Dashboard" min="-2" max="-2" attributes="0"/>
-                  <Component id="Report" min="-2" max="-2" attributes="0"/>
+                  <Component id="Report1" min="-2" max="-2" attributes="0"/>
                   <Component id="Collections" min="-2" max="-2" attributes="0"/>
                   <Component id="Demo6Stunde" min="-2" max="-2" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -770,7 +773,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="Report">
+            <Container class="javax.swing.JPanel" name="Report1">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
                 <Property name="useNullLayout" type="boolean" value="false"/>
@@ -785,7 +788,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="680" y="530" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="680" y="510" width="-1" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -822,7 +825,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Container class="javax.swing.JPanel" name="Report1">
+                <Container class="javax.swing.JPanel" name="Report2">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
@@ -842,7 +845,7 @@
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="680" y="530" width="-1" height="-1"/>
+                          <AbsoluteConstraints x="680" y="510" width="-1" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>

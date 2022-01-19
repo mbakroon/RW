@@ -113,12 +113,12 @@ public class MainMenu extends javax.swing.JFrame {
         Collections = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         CollectionLabel2 = new javax.swing.JLabel();
-        Report = new javax.swing.JPanel();
+        Report1 = new javax.swing.JPanel();
         jButton_report1 = new javax.swing.JButton();
         jScrollPanel_report1 = new javax.swing.JScrollPane();
         jEditorPane3 = new javax.swing.JEditorPane();
         ReportLabel3 = new javax.swing.JLabel();
-        Report1 = new javax.swing.JPanel();
+        Report2 = new javax.swing.JPanel();
         jButton_report2 = new javax.swing.JButton();
         ReportLabel4 = new javax.swing.JLabel();
         jScrollPanel_report2 = new javax.swing.JScrollPane();
@@ -239,6 +239,11 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel_SideBar.add(jPanel_Members, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 210, 40));
 
         jPanel_Report.setBackground(new java.awt.Color(54, 70, 78));
+        jPanel_Report.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel_ReportMouseClicked(evt);
+            }
+        });
         jPanel_Report.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -408,7 +413,7 @@ public class MainMenu extends javax.swing.JFrame {
         CollectionLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/background2 copy1000_625.jpg"))); // NOI18N
         Collections.add(CollectionLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
-        Report.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Report1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_report1.setText("Nächste");
         jButton_report1.addActionListener(new java.awt.event.ActionListener() {
@@ -416,17 +421,17 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton_report1ActionPerformed(evt);
             }
         });
-        Report.add(jButton_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, -1, -1));
+        Report1.add(jButton_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, -1, -1));
 
         jScrollPanel_report1.setBorder(null);
 
         jEditorPane3.setBorder(null);
         jScrollPanel_report1.setViewportView(jEditorPane3);
 
-        Report.add(jScrollPanel_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
-        Report.add(ReportLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+        Report1.add(jScrollPanel_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+        Report1.add(ReportLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
-        Report1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Report2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_report2.setText("Zurück");
         jButton_report2.addActionListener(new java.awt.event.ActionListener() {
@@ -434,17 +439,17 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton_report2ActionPerformed(evt);
             }
         });
-        Report1.add(jButton_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, -1, -1));
-        Report1.add(ReportLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+        Report2.add(jButton_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, -1, -1));
+        Report2.add(ReportLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         jScrollPanel_report2.setBorder(null);
 
         jEditorPane4.setBorder(null);
         jScrollPanel_report2.setViewportView(jEditorPane4);
 
-        Report1.add(jScrollPanel_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+        Report2.add(jScrollPanel_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
-        Report.add(Report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        Report1.add(Report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         sicherheit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -461,7 +466,7 @@ public class MainMenu extends javax.swing.JFrame {
             dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Members, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(Dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Report, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Report1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(Collections, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(Demo6Stunde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -473,7 +478,7 @@ public class MainMenu extends javax.swing.JFrame {
             dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Members, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(Dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Report, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Report1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(Collections, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(Demo6Stunde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -591,8 +596,8 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
-        
-        dynamicPanel.add(Report);
+
+        dynamicPanel.add(Report1);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
     }//GEN-LAST:event_ReportLabelSidebarMouseClicked
@@ -603,7 +608,7 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
 
-        dynamicPanel.add(Report1);
+        dynamicPanel.add(Report2);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
            
@@ -625,10 +630,20 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
         
-        dynamicPanel.add(Report);
+        dynamicPanel.add(Report1);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
     }//GEN-LAST:event_jButton_report2ActionPerformed
+
+    private void jPanel_ReportMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel_ReportMouseClicked
+        dynamicPanel.removeAll();
+        dynamicPanel.repaint();
+        dynamicPanel.revalidate();
+        
+        dynamicPanel.add(Report1);
+        dynamicPanel.repaint();
+        dynamicPanel.revalidate();
+    }//GEN-LAST:event_jPanel_ReportMouseClicked
 
     /**
      * @param args the command line arguments
@@ -679,8 +694,8 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel Members;
     private javax.swing.JLabel MembersLabelSidebar;
     private javax.swing.JLabel OP_CloseSideBar;
-    private javax.swing.JPanel Report;
     private javax.swing.JPanel Report1;
+    private javax.swing.JPanel Report2;
     private javax.swing.JLabel ReportLabel3;
     private javax.swing.JLabel ReportLabel4;
     private javax.swing.JLabel ReportLabelSidebar;

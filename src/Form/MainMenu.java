@@ -51,6 +51,10 @@ public class MainMenu extends javax.swing.JFrame {
         try {
             jEditorPane2.setPage(getClass().getResource("../HTML/startseite.html"));
             jEditorPane1.setPage(getClass().getResource("../HTML/Sicherheit.html"));
+            jEditorPane3.setPage(getClass().getResource("../HTML/Report1.html"));
+            jEditorPane4.setPage(getClass().getResource("../HTML/Report2.html"));
+
+
 
         } catch (IOException ex) {
             Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
@@ -110,14 +114,15 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         CollectionLabel2 = new javax.swing.JLabel();
         Report = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jLabel35 = new javax.swing.JLabel();
+        jButton_report1 = new javax.swing.JButton();
+        jScrollPanel_report1 = new javax.swing.JScrollPane();
+        jEditorPane3 = new javax.swing.JEditorPane();
         ReportLabel3 = new javax.swing.JLabel();
+        Report1 = new javax.swing.JPanel();
+        jButton_report2 = new javax.swing.JButton();
+        ReportLabel4 = new javax.swing.JLabel();
+        jScrollPanel_report2 = new javax.swing.JScrollPane();
+        jEditorPane4 = new javax.swing.JEditorPane();
         sicherheit = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
@@ -405,46 +410,41 @@ public class MainMenu extends javax.swing.JFrame {
 
         Report.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel28.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel28.setText("Wenn Ihr Unternehmen in den letzten 12 Monaten Opfer von Ransomware geworden ist, hat Ihr Unternehmen");
-        Report.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 30));
-
-        jLabel30.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel30.setText("wiederherzustellen?");
-        Report.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 770, 30));
-        jLabel30.getAccessibleContext().setAccessibleName("Halllllooo");
-
-        jLabel31.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Statistic1.jpg"))); // NOI18N
-        Report.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, 270));
-
-        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setRows(5);
-        jTextArea1.setText("The bar chart below illustrates the annual number of ransomware attacks worldwide (in millions) from 2016 to 2020.\nThe horizontal axis represents the year,while the vertical axis represents the number of ransomware attacks.\nIt can be seen that the number of ransomware attacks fell extremly from 638 million in 2016 to 184 million in 2017. \nThe Numbers of ransomware attacks in 2018 (204,24 million) and 2019 (187,9 million) are relatively stable, \nbut with 304 million ransomware attacks in 2020 we can see a clear and alarming upward trend in the annual \nnumber of ransomware attacks.");
-        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jScrollPane1.setViewportView(jTextArea1);
-
-        Report.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 640, 110));
-
-        jButton1.setText("Nächste");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_report1.setText("Nächste");
+        jButton_report1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton_report1ActionPerformed(evt);
             }
         });
-        Report.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, -1, -1));
+        Report.add(jButton_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, -1, -1));
 
-        jLabel35.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel35.setText(" ein Lösegeld (unter Verwendung von Bitcoin oder einer anderen anonymen Währung) gezahlt, um Daten ");
-        Report.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 770, 30));
+        jScrollPanel_report1.setBorder(null);
+
+        jEditorPane3.setBorder(null);
+        jScrollPanel_report1.setViewportView(jEditorPane3);
+
+        Report.add(jScrollPanel_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
         Report.add(ReportLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+
+        Report1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton_report2.setText("Zurück");
+        jButton_report2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_report2ActionPerformed(evt);
+            }
+        });
+        Report1.add(jButton_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, -1, -1));
+        Report1.add(ReportLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+
+        jScrollPanel_report2.setBorder(null);
+
+        jEditorPane4.setBorder(null);
+        jScrollPanel_report2.setViewportView(jEditorPane4);
+
+        Report1.add(jScrollPanel_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+
+        Report.add(Report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         sicherheit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -597,17 +597,18 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.revalidate();
     }//GEN-LAST:event_ReportLabelSidebarMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton_report1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_report1ActionPerformed
         // TODO add your handling code here:
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
 
-        dynamicPanel.add(sicherheit);
+        dynamicPanel.add(Report1);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
+           
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton_report1ActionPerformed
 
     private void ReportLabelSidebar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportLabelSidebar1MouseClicked
         dynamicPanel.removeAll();
@@ -618,6 +619,16 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
     }//GEN-LAST:event_ReportLabelSidebar1MouseClicked
+
+    private void jButton_report2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_report2ActionPerformed
+        dynamicPanel.removeAll();
+        dynamicPanel.repaint();
+        dynamicPanel.revalidate();
+        
+        dynamicPanel.add(Report);
+        dynamicPanel.repaint();
+        dynamicPanel.revalidate();
+    }//GEN-LAST:event_jButton_report2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -669,14 +680,19 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel MembersLabelSidebar;
     private javax.swing.JLabel OP_CloseSideBar;
     private javax.swing.JPanel Report;
+    private javax.swing.JPanel Report1;
     private javax.swing.JLabel ReportLabel3;
+    private javax.swing.JLabel ReportLabel4;
     private javax.swing.JLabel ReportLabelSidebar;
     private javax.swing.JLabel ReportLabelSidebar1;
     private javax.swing.JLabel demo_six_hour;
     private javax.swing.JPanel dynamicPanel;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton_report1;
+    private javax.swing.JButton jButton_report2;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JEditorPane jEditorPane2;
+    private javax.swing.JEditorPane jEditorPane3;
+    private javax.swing.JEditorPane jEditorPane4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -689,11 +705,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
@@ -704,10 +716,10 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_SideBar;
     private javax.swing.JPanel jPanel_Six_hour;
     private javax.swing.JPanel jPanel_sicherheit;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPanel_report1;
+    private javax.swing.JScrollPane jScrollPanel_report2;
     private javax.swing.JPanel navBar;
     private javax.swing.JPanel sicherheit;
     private javax.swing.JPanel sideBarText;

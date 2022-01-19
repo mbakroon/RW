@@ -543,9 +543,8 @@
                   <Component id="Collections" min="-2" pref="790" max="-2" attributes="0"/>
                   <Component id="Demo6Stunde" min="-2" max="-2" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="Report1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="Report1" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -560,8 +559,7 @@
                   <Component id="Demo6Stunde" min="-2" max="-2" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="Report1" min="-2" max="-2" attributes="0"/>
+                          <Component id="Report1" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -769,7 +767,7 @@
                       <Color blue="0" green="0" red="cc" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Form/Statistic1.jpg"/>
+                      <Image iconType="3" name="/Icons/Statistic1.jpg"/>
                     </Property>
                   </Properties>
                   <Constraints>
@@ -841,11 +839,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="ReportLabel3">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Form/blackbackground.jpg"/>
-                    </Property>
-                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="0" y="0" width="790" height="570"/>
@@ -901,7 +894,7 @@
                       <Color blue="0" green="0" red="cc" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Form/Statistic2.jpg"/>
+                      <Image iconType="3" name="/Icons/Statistic2.jpg"/>
                     </Property>
                   </Properties>
                   <Constraints>
@@ -957,11 +950,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="ReportLabel4">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Form/blackbackground.jpg"/>
-                    </Property>
-                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="0" y="0" width="790" height="570"/>

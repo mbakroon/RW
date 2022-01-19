@@ -398,7 +398,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel31.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form/Statistic1.jpg"))); // NOI18N
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Statistic1.jpg"))); // NOI18N
         Report.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, 270));
 
         jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
@@ -424,8 +424,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel35.setForeground(new java.awt.Color(204, 0, 0));
         jLabel35.setText(" ein Lösegeld (unter Verwendung von Bitcoin oder einer anderen anonymen Währung) gezahlt, um Daten ");
         Report.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 770, 30));
-
-        ReportLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form/blackbackground.jpg"))); // NOI18N
         Report.add(ReportLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         Report1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -442,7 +440,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel34.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form/Statistic2.jpg"))); // NOI18N
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Statistic2.jpg"))); // NOI18N
         Report1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 640, 250));
 
         jTextArea2.setBackground(new java.awt.Color(0, 0, 0));
@@ -463,8 +461,6 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         Report1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, -1, -1));
-
-        ReportLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form/blackbackground.jpg"))); // NOI18N
         Report1.add(ReportLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         javax.swing.GroupLayout dynamicPanelLayout = new javax.swing.GroupLayout(dynamicPanel);
@@ -477,9 +473,8 @@ public class MainMenu extends javax.swing.JFrame {
             .addComponent(Collections, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(Demo6Stunde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dynamicPanelLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Report1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(dynamicPanelLayout.createSequentialGroup()
+                    .addComponent(Report1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         dynamicPanelLayout.setVerticalGroup(
@@ -491,8 +486,7 @@ public class MainMenu extends javax.swing.JFrame {
             .addComponent(Demo6Stunde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dynamicPanelLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Report1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Report1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 

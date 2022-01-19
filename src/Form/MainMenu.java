@@ -113,16 +113,16 @@ public class MainMenu extends javax.swing.JFrame {
         Collections = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         CollectionLabel2 = new javax.swing.JLabel();
-        Report1 = new javax.swing.JPanel();
-        jButton_report1 = new javax.swing.JButton();
-        jScrollPanel_report1 = new javax.swing.JScrollPane();
-        jEditorPane3 = new javax.swing.JEditorPane();
-        ReportLabel3 = new javax.swing.JLabel();
         Report2 = new javax.swing.JPanel();
         jButton_report2 = new javax.swing.JButton();
         ReportLabel4 = new javax.swing.JLabel();
         jScrollPanel_report2 = new javax.swing.JScrollPane();
         jEditorPane4 = new javax.swing.JEditorPane();
+        Report1 = new javax.swing.JPanel();
+        jButton_report1 = new javax.swing.JButton();
+        jScrollPanel_report1 = new javax.swing.JScrollPane();
+        jEditorPane3 = new javax.swing.JEditorPane();
+        ReportLabel3 = new javax.swing.JLabel();
         sicherheit = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
@@ -413,24 +413,6 @@ public class MainMenu extends javax.swing.JFrame {
         CollectionLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/background2 copy1000_625.jpg"))); // NOI18N
         Collections.add(CollectionLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
-        Report1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton_report1.setText("Nächste");
-        jButton_report1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_report1ActionPerformed(evt);
-            }
-        });
-        Report1.add(jButton_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, -1, -1));
-
-        jScrollPanel_report1.setBorder(null);
-
-        jEditorPane3.setBorder(null);
-        jScrollPanel_report1.setViewportView(jEditorPane3);
-
-        Report1.add(jScrollPanel_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
-        Report1.add(ReportLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
-
         Report2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_report2.setText("Zurück");
@@ -439,7 +421,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton_report2ActionPerformed(evt);
             }
         });
-        Report2.add(jButton_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, -1, -1));
+        Report2.add(jButton_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, -1, -1));
         Report2.add(ReportLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         jScrollPanel_report2.setBorder(null);
@@ -449,7 +431,23 @@ public class MainMenu extends javax.swing.JFrame {
 
         Report2.add(jScrollPanel_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
-        Report1.add(Report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        Report1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton_report1.setText("Nächste");
+        jButton_report1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_report1ActionPerformed(evt);
+            }
+        });
+        Report1.add(jButton_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, -1, -1));
+
+        jScrollPanel_report1.setBorder(null);
+
+        jEditorPane3.setBorder(null);
+        jScrollPanel_report1.setViewportView(jEditorPane3);
+
+        Report1.add(jScrollPanel_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+        Report1.add(ReportLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         sicherheit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -473,6 +471,10 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(dynamicPanelLayout.createSequentialGroup()
                     .addComponent(sicherheit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
+            .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(dynamicPanelLayout.createSequentialGroup()
+                    .addComponent(Report2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         dynamicPanelLayout.setVerticalGroup(
             dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -484,6 +486,10 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dynamicPanelLayout.createSequentialGroup()
                     .addComponent(sicherheit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(dynamicPanelLayout.createSequentialGroup()
+                    .addComponent(Report2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 

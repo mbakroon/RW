@@ -49,7 +49,9 @@ public class MainMenu extends javax.swing.JFrame {
     public void setTextAria(){
          
         try {
-            jEditorPane2.setPage(getClass().getResource("startseite.html"));
+            jEditorPane2.setPage(getClass().getResource("../HTML/startseite.html"));
+            jEditorPane1.setPage(getClass().getResource("../HTML/Sicherheit.html"));
+
         } catch (IOException ex) {
             Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -68,6 +70,9 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         OP_CloseSideBar = new javax.swing.JLabel();
         jPanel_SideBar = new javax.swing.JPanel();
+        jPanel_sicherheit = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        ReportLabelSidebar1 = new javax.swing.JLabel();
         jPanel_Six_hour = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         demo_six_hour = new javax.swing.JLabel();
@@ -113,14 +118,9 @@ public class MainMenu extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         ReportLabel3 = new javax.swing.JLabel();
-        Report1 = new javax.swing.JPanel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
+        sicherheit = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
-        ReportLabel4 = new javax.swing.JLabel();
+        jEditorPane1 = new javax.swing.JEditorPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -152,6 +152,26 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel_SideBar.setBackground(new java.awt.Color(54, 70, 78));
         jPanel_SideBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel_sicherheit.setBackground(new java.awt.Color(54, 70, 78));
+        jPanel_sicherheit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-increase-23.png"))); // NOI18N
+        jPanel_sicherheit.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 4, 40, 30));
+
+        ReportLabelSidebar1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        ReportLabelSidebar1.setForeground(new java.awt.Color(255, 255, 255));
+        ReportLabelSidebar1.setText("Sicherheit Massname");
+        ReportLabelSidebar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ReportLabelSidebar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReportLabelSidebar1MouseClicked(evt);
+            }
+        });
+        jPanel_sicherheit.add(ReportLabelSidebar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
+
+        jPanel_SideBar.add(jPanel_sicherheit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 210, 40));
 
         jPanel_Six_hour.setBackground(new java.awt.Color(54, 70, 78));
         jPanel_Six_hour.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -426,42 +446,14 @@ public class MainMenu extends javax.swing.JFrame {
         Report.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 770, 30));
         Report.add(ReportLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
-        Report1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        sicherheit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel32.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel32.setText("Jährliche Anzahl von Ransomware-Angriffen weltweit von 2016 bis 2020 (in Millionen)");
-        Report1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 610, 30));
+        jScrollPane3.setBorder(null);
 
-        jLabel33.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel33.setText("Anzahl der Ransomware-Angriffe pro Jahr 2016-2020");
-        Report1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 400, 30));
+        jEditorPane1.setBorder(null);
+        jScrollPane3.setViewportView(jEditorPane1);
 
-        jLabel34.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Statistic2.jpg"))); // NOI18N
-        Report1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 640, 250));
-
-        jTextArea2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea2.setRows(5);
-        jTextArea2.setText("Dieses Balkendiagramm zeigt die Erfolgsquote der Wiederherstellung der Daten von global agierenden \nUnternehmen, die einem Ransomware-Angriff zum Opfer fielen und für die Wiederherstellung ihrer Daten \n„Lösegeld“ zahlten.\nEs wird deutlich, dass nur ein verhältnismäßig geringer Anteil von 66,9% der weltweiten Unternehmen, die einem \nRansomware-Angriff zum Opfer wurden und das geforderte Lösegeld entsprechend zahlten, auch wirklich ihre \nDaten erfolgreich wiederherstellen konnten. Dementsprechend verloren 33,1% der Lösegeld zahlenden \nUnternehmen trotz der Zahlung ihre Daten.\n\nWenn wir hingegen die Unternehmen betrachten, die einem Ransomware-Angriff zum Opfer wurden und das \ngeforderte Lösegeld nicht zahlten, sehen wir, dass 15,5% dieser Unternehmen ihre Daten verloren haben, aber \nein immenser (und für viele überraschend hoher) Anteil von 84,5% der Unternehmen, die das geforderte Lösegeld \nnicht zahlten, ihre Daten erfolgreich wiederherstellen konnten.\nDie Schlussfolgerung, die sich aus diesen Daten ergibt ist, dass Unternehmen, die einem Ransomware-Angriff \nzum Opfer wurden, eine höhere Erfolgsquote haben ihre Daten wiederherzustellen, wenn sie das geforderte \nLösegeld nicht bezahlen, also der Forderung der Hacker nicht nachkommen.");
-        jTextArea2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jScrollPane3.setViewportView(jTextArea2);
-
-        Report1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 650, 140));
-
-        jButton2.setText("Zurück");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        Report1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, -1, -1));
-        Report1.add(ReportLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+        sicherheit.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         javax.swing.GroupLayout dynamicPanelLayout = new javax.swing.GroupLayout(dynamicPanel);
         dynamicPanel.setLayout(dynamicPanelLayout);
@@ -474,7 +466,7 @@ public class MainMenu extends javax.swing.JFrame {
             .addComponent(Demo6Stunde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(dynamicPanelLayout.createSequentialGroup()
-                    .addComponent(Report1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sicherheit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         dynamicPanelLayout.setVerticalGroup(
@@ -486,7 +478,7 @@ public class MainMenu extends javax.swing.JFrame {
             .addComponent(Demo6Stunde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(dynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dynamicPanelLayout.createSequentialGroup()
-                    .addComponent(Report1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sicherheit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -611,22 +603,21 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
 
-        dynamicPanel.add(Report1);
+        dynamicPanel.add(sicherheit);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+    private void ReportLabelSidebar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportLabelSidebar1MouseClicked
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
         
-        dynamicPanel.add(Report);
+        dynamicPanel.add(sicherheit);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ReportLabelSidebar1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -678,17 +669,17 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel MembersLabelSidebar;
     private javax.swing.JLabel OP_CloseSideBar;
     private javax.swing.JPanel Report;
-    private javax.swing.JPanel Report1;
     private javax.swing.JLabel ReportLabel3;
-    private javax.swing.JLabel ReportLabel4;
     private javax.swing.JLabel ReportLabelSidebar;
+    private javax.swing.JLabel ReportLabelSidebar1;
     private javax.swing.JLabel demo_six_hour;
     private javax.swing.JPanel dynamicPanel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JEditorPane jEditorPane2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -702,9 +693,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
@@ -715,12 +703,13 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_Report;
     private javax.swing.JPanel jPanel_SideBar;
     private javax.swing.JPanel jPanel_Six_hour;
+    private javax.swing.JPanel jPanel_sicherheit;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JPanel navBar;
+    private javax.swing.JPanel sicherheit;
     private javax.swing.JPanel sideBarText;
     // End of variables declaration//GEN-END:variables
    

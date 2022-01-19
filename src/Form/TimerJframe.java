@@ -54,7 +54,7 @@ public class TimerJframe extends javax.swing.JFrame {
     //for Text in JEditorPanel
     public void setTextAria(){
           try {
-            jEditorPane1.setPage(getClass().getResource("newhtml.html"));
+            jEditorPane1.setPage(getClass().getResource("../HTML/HTML_TimerFram.html"));
         } catch (IOException ex) {
             Logger.getLogger(TimerJframe.class.getName()).log(Level.SEVERE, null, ex);
         }

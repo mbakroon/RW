@@ -55,7 +55,6 @@ public class TimerJframe extends javax.swing.JFrame {
     public void setTextAria(){
           try {
             jEditorPane1.setPage(getClass().getResource("../HTML/HTML_TimerFram.html"));
-            jEditorPane2.setPage(getClass().getResource("../HTML/hyperLink_timerFrame.html"));
 
         } catch (IOException ex) {
             Logger.getLogger(TimerJframe.class.getName()).log(Level.SEVERE, null, ex);
@@ -281,8 +280,6 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jEditorPane2 = new javax.swing.JEditorPane();
         Background_TimerPanel = new javax.swing.JLabel();
         Hack_background = new javax.swing.JLabel();
 
@@ -501,10 +498,6 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel_TimerPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 400, 90));
 
-        jScrollPane2.setViewportView(jEditorPane2);
-
-        jPanel_TimerPanel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 140, 110));
-
         Background_TimerPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/timerbackgroundhack copy.gif"))); // NOI18N
         Background_TimerPanel.setText("jLabel3");
         jPanel_TimerPanel.add(Background_TimerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 625));
@@ -663,7 +656,6 @@ public class TimerJframe extends javax.swing.JFrame {
     private javax.swing.JPanel MainJPanel;
     private javax.swing.JButton Submit_Button;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JEditorPane jEditorPane2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
@@ -682,7 +674,6 @@ public class TimerJframe extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_TimerPanel;
     private javax.swing.JPanel jPanel_timerBox;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JScrollPane jScrollPane_ProgressBars;
     private javax.swing.JTextField jTextField_decryting;
     private javax.swing.JLabel skipTimer_Button;

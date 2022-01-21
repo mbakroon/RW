@@ -109,6 +109,10 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         Demo6 = new javax.swing.JLabel();
         Members = new javax.swing.JPanel();
+        TeamImg1 = new javax.swing.JLabel();
+        TeamImg2 = new javax.swing.JLabel();
+        TeamImg3 = new javax.swing.JLabel();
+        TeamImg4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane5 = new javax.swing.JEditorPane();
         background_member = new javax.swing.JLabel();
@@ -398,6 +402,22 @@ public class MainMenu extends javax.swing.JFrame {
         Demo6Stunde.add(Demo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         Members.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TeamImg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/teamImg.png"))); // NOI18N
+        TeamImg1.setText("jLabel2");
+        Members.add(TeamImg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 5, 110, 100));
+
+        TeamImg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/teamImg.png"))); // NOI18N
+        TeamImg2.setText("jLabel2");
+        Members.add(TeamImg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 110, 100));
+
+        TeamImg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/teamImg.png"))); // NOI18N
+        TeamImg3.setText("jLabel2");
+        Members.add(TeamImg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 110, 100));
+
+        TeamImg4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/TeamImgfemale-user-80.png"))); // NOI18N
+        TeamImg4.setText("jLabel2");
+        Members.add(TeamImg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 110, 100));
 
         jScrollPane1.setBorder(null);
 
@@ -710,6 +730,10 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel ReportLabel4;
     private javax.swing.JLabel ReportLabelSidebar;
     private javax.swing.JLabel ReportLabelSidebar1;
+    private javax.swing.JLabel TeamImg1;
+    private javax.swing.JLabel TeamImg2;
+    private javax.swing.JLabel TeamImg3;
+    private javax.swing.JLabel TeamImg4;
     private javax.swing.JLabel background_member;
     private javax.swing.JLabel demo_six_hour;
     private javax.swing.JPanel dynamicPanel;

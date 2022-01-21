@@ -19,49 +19,48 @@ public class MainMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form MainMenu
-     * 
+     *
      */
     // This is mainmenu class
     public MainMenu() {
         initComponents();
         this.setResizable(false);
         setTextAria();
-         dynamicPanel.removeAll();
+        dynamicPanel.removeAll();
         dynamicPanel.revalidate();
         dynamicPanel.repaint();
 
         dynamicPanel.revalidate();
         dynamicPanel.add(Dashboard);
         dynamicPanel.repaint();
-    
 
+    }
 
-    }   
-     private void labelcolor(JLabel label) {
+    private void labelcolor(JLabel label) {
         label.setBackground(new java.awt.Color(53, 162, 107));
     }
 
     private void resetlabelcolor(JLabel label) {
         label.setBackground(new java.awt.Color(54, 70, 78));
     }
-     
-        //for Text in JEditorPanel
-    public void setTextAria(){
-         
+
+    //for Text in JEditorPanel
+    public void setTextAria() {
+
         try {
             jEditorPane2.setPage(getClass().getResource("../HTML/startseite.html"));
             jEditorPane1.setPage(getClass().getResource("../HTML/Sicherheit.html"));
             jEditorPane3.setPage(getClass().getResource("../HTML/Report1.html"));
             jEditorPane4.setPage(getClass().getResource("../HTML/Report2.html"));
             jEditorPane5.setPage(getClass().getResource("../HTML/Team.html"));
-
-
+            jEditorPane6.setVisible(false);
 
         } catch (IOException ex) {
             Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
         }
-      
+
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -96,7 +95,8 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         sideBarText = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jEditorPane6 = new javax.swing.JEditorPane();
         navBar = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -303,7 +303,10 @@ public class MainMenu extends javax.swing.JFrame {
 
         MainJPanel.add(jPanel_SideBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 55, 210, 570));
 
-        jLabel22.setText("Hello Workd");
+        jScrollPane4.setBorder(null);
+
+        jEditorPane6.setBorder(null);
+        jScrollPane4.setViewportView(jEditorPane6);
 
         javax.swing.GroupLayout sideBarTextLayout = new javax.swing.GroupLayout(sideBarText);
         sideBarText.setLayout(sideBarTextLayout);
@@ -311,19 +314,17 @@ public class MainMenu extends javax.swing.JFrame {
             sideBarTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 210, Short.MAX_VALUE)
             .addGroup(sideBarTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(sideBarTextLayout.createSequentialGroup()
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sideBarTextLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         sideBarTextLayout.setVerticalGroup(
             sideBarTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 570, Short.MAX_VALUE)
             .addGroup(sideBarTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(sideBarTextLayout.createSequentialGroup()
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sideBarTextLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         MainJPanel.add(sideBarText, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 55, 210, 570));
@@ -575,10 +576,19 @@ public class MainMenu extends javax.swing.JFrame {
             th.start();
             x = 210;
         }
+        try {
+            jEditorPane6.setVisible(true);
+            jEditorPane6.setPage(getClass().getResource("../HTML/ProjecktInfo_SideBar.html"));
+        } catch (IOException ex) {
+            Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
     }//GEN-LAST:event_OP_CloseSideBarMouseClicked
 
     private void OP_CloseSideBarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OP_CloseSideBarMouseEntered
         labelcolor(OP_CloseSideBar);
+
     }//GEN-LAST:event_OP_CloseSideBarMouseEntered
 
     private void OP_CloseSideBarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OP_CloseSideBarMouseExited
@@ -588,18 +598,18 @@ public class MainMenu extends javax.swing.JFrame {
     private void demo_six_hourMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_demo_six_hourMouseClicked
         new TimerJframe().setVisible(true);
         this.dispose();
-      
+
     }//GEN-LAST:event_demo_six_hourMouseClicked
-  
+
     private void MembersLabelSidebarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MembersLabelSidebarMouseClicked
         dynamicPanel.removeAll();
         dynamicPanel.revalidate();
         dynamicPanel.repaint();
-        
+
         dynamicPanel.add(Members);
         dynamicPanel.revalidate();
         dynamicPanel.repaint();
-        
+
     }//GEN-LAST:event_MembersLabelSidebarMouseClicked
 
     private void DashboardLabelSideBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardLabelSideBarMouseClicked
@@ -610,14 +620,14 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.revalidate();
         dynamicPanel.add(Dashboard);
         dynamicPanel.repaint();
-        
+
     }//GEN-LAST:event_DashboardLabelSideBarMouseClicked
 
     private void CollectionLabelSideBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CollectionLabelSideBarMouseClicked
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
-        
+
         dynamicPanel.add(Collections);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
@@ -642,7 +652,7 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.add(Report2);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
-           
+
 
     }//GEN-LAST:event_jButton_report1ActionPerformed
 
@@ -650,7 +660,7 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
-        
+
         dynamicPanel.add(sicherheit);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
@@ -660,7 +670,7 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
-        
+
         dynamicPanel.add(Report1);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
@@ -670,7 +680,7 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
-        
+
         dynamicPanel.add(Report1);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
@@ -702,7 +712,7 @@ public class MainMenu extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         /* Create and display the form */
         // JProgressBar-Objekt wird erzeugt
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -744,13 +754,13 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JEditorPane jEditorPane3;
     private javax.swing.JEditorPane jEditorPane4;
     private javax.swing.JEditorPane jEditorPane5;
+    private javax.swing.JEditorPane jEditorPane6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -769,11 +779,12 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPanel_report1;
     private javax.swing.JScrollPane jScrollPanel_report2;
     private javax.swing.JPanel navBar;
     private javax.swing.JPanel sicherheit;
     private javax.swing.JPanel sideBarText;
     // End of variables declaration//GEN-END:variables
-   
+
 }

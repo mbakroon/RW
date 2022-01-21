@@ -60,14 +60,15 @@ public class FirstPage extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        closelabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-zeichen_-schließen-96.png"))); // NOI18N
+        closelabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/enter.png"))); // NOI18N
+        closelabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         closelabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         closelabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 closelabelMouseClicked(evt);
             }
         });
-        jPanel1.add(closelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 540, 90, 80));
+        jPanel1.add(closelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 560, 70, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/hacker1.gif"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 625));

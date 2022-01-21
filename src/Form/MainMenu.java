@@ -19,7 +19,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form MainMenu
-     * hallo Stefan 18.01
+     * 
      */
     // This is mainmenu class
     public MainMenu() {
@@ -53,6 +53,7 @@ public class MainMenu extends javax.swing.JFrame {
             jEditorPane1.setPage(getClass().getResource("../HTML/Sicherheit.html"));
             jEditorPane3.setPage(getClass().getResource("../HTML/Report1.html"));
             jEditorPane4.setPage(getClass().getResource("../HTML/Report2.html"));
+            jEditorPane5.setPage(getClass().getResource("../HTML/Team.html"));
 
 
 
@@ -108,8 +109,9 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         Demo6 = new javax.swing.JLabel();
         Members = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        MemberLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jEditorPane5 = new javax.swing.JEditorPane();
+        background_member = new javax.swing.JLabel();
         Collections = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         CollectionLabel2 = new javax.swing.JLabel();
@@ -162,7 +164,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel_sicherheit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-increase-23.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/protect-40.png"))); // NOI18N
         jPanel_sicherheit.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 4, 40, 30));
 
         ReportLabelSidebar1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
@@ -176,7 +178,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel_sicherheit.add(ReportLabelSidebar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
 
-        jPanel_SideBar.add(jPanel_sicherheit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 210, 40));
+        jPanel_SideBar.add(jPanel_sicherheit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 210, 40));
 
         jPanel_Six_hour.setBackground(new java.awt.Color(54, 70, 78));
         jPanel_Six_hour.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -196,7 +198,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel_Six_hour.add(demo_six_hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
 
-        jPanel_SideBar.add(jPanel_Six_hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 210, 40));
+        jPanel_SideBar.add(jPanel_Six_hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 40));
 
         jPanel_Dashboard.setBackground(new java.awt.Color(54, 70, 78));
         jPanel_Dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -236,7 +238,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel_Members.add(MembersLabelSidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
 
-        jPanel_SideBar.add(jPanel_Members, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 210, 40));
+        jPanel_SideBar.add(jPanel_Members, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 210, 40));
 
         jPanel_Report.setBackground(new java.awt.Color(54, 70, 78));
         jPanel_Report.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -261,7 +263,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel_Report.add(ReportLabelSidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
 
-        jPanel_SideBar.add(jPanel_Report, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 210, 40));
+        jPanel_SideBar.add(jPanel_Report, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 210, 40));
 
         jPanel_Collections.setBackground(new java.awt.Color(54, 70, 78));
         jPanel_Collections.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -281,7 +283,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel_Collections.add(CollectionLabelSideBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
 
-        jPanel_SideBar.add(jPanel_Collections, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 210, 40));
+        jPanel_SideBar.add(jPanel_Collections, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 210, 40));
 
         jLabel14.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -397,12 +399,15 @@ public class MainMenu extends javax.swing.JFrame {
 
         Members.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel26.setFont(new java.awt.Font("Lucida Grande", 0, 48)); // NOI18N
-        jLabel26.setText("Members");
-        Members.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 330, 180));
+        jScrollPane1.setBorder(null);
 
-        MemberLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/background2 copy1000_625.jpg"))); // NOI18N
-        Members.add(MemberLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+        jEditorPane5.setBorder(null);
+        jScrollPane1.setViewportView(jEditorPane5);
+
+        Members.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
+
+        background_member.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/background2 copy1000_625.jpg"))); // NOI18N
+        Members.add(background_member, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         Collections.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -421,7 +426,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton_report2ActionPerformed(evt);
             }
         });
-        Report2.add(jButton_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, -1, -1));
+        Report2.add(jButton_report2, new org.netbeans.lib.awtextra.AbsoluteConstraints(718, 0, 70, -1));
         Report2.add(ReportLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         jScrollPanel_report2.setBorder(null);
@@ -439,7 +444,7 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton_report1ActionPerformed(evt);
             }
         });
-        Report1.add(jButton_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, -1, -1));
+        Report1.add(jButton_report1, new org.netbeans.lib.awtextra.AbsoluteConstraints(705, 0, 80, -1));
 
         jScrollPanel_report1.setBorder(null);
 
@@ -513,7 +518,7 @@ public class MainMenu extends javax.swing.JFrame {
     Thread th;
     private void OP_CloseSideBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OP_CloseSideBarMouseClicked
         if (x == 210) {
-            jPanel_SideBar.setSize(210, 552);
+            jPanel_SideBar.setSize(210, 570);
 
             th = new Thread() {
                 @Override
@@ -521,7 +526,7 @@ public class MainMenu extends javax.swing.JFrame {
                     try {
                         for (int i = 210; i >= 0; i--) {
                             Thread.sleep(1);
-                            jPanel_SideBar.setSize(i, 552);
+                            jPanel_SideBar.setSize(i, 570);
 
                             OP_CloseSideBar.setBackground(new java.awt.Color(255, 255, 255));
                         }
@@ -533,14 +538,14 @@ public class MainMenu extends javax.swing.JFrame {
             th.start();
             x = 0;
         } else if (x == 0) {
-            jPanel_SideBar.setSize(x, 552);
+            jPanel_SideBar.setSize(x, 570);
             th = new Thread() {
                 @Override
                 public void run() {
                     try {
                         for (int i = 0; i <= x; i++) {
                             th.sleep(1);
-                            jPanel_SideBar.setSize(i, 552);
+                            jPanel_SideBar.setSize(i, 570);
                         }
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(null, e);
@@ -696,7 +701,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel Demo6;
     private javax.swing.JPanel Demo6Stunde;
     private javax.swing.JPanel MainJPanel;
-    private javax.swing.JLabel MemberLabel1;
     private javax.swing.JPanel Members;
     private javax.swing.JLabel MembersLabelSidebar;
     private javax.swing.JLabel OP_CloseSideBar;
@@ -706,6 +710,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel ReportLabel4;
     private javax.swing.JLabel ReportLabelSidebar;
     private javax.swing.JLabel ReportLabelSidebar1;
+    private javax.swing.JLabel background_member;
     private javax.swing.JLabel demo_six_hour;
     private javax.swing.JPanel dynamicPanel;
     private javax.swing.JButton jButton_report1;
@@ -714,6 +719,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JEditorPane jEditorPane2;
     private javax.swing.JEditorPane jEditorPane3;
     private javax.swing.JEditorPane jEditorPane4;
+    private javax.swing.JEditorPane jEditorPane5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -724,7 +730,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel4;
@@ -737,6 +742,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_SideBar;
     private javax.swing.JPanel jPanel_Six_hour;
     private javax.swing.JPanel jPanel_sicherheit;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPanel_report1;

@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.ScrollPaneConstants;
@@ -149,6 +150,9 @@ public class TimerJframe extends javax.swing.JFrame {
                                     isStart_timer = false;
                                     JOptionPane.showMessageDialog(jPanel_timerBox, "Time is over", "Warning", JOptionPane.QUESTION_MESSAGE);
                                     th_startTimer.stop();
+//                                    jPanel_TimerPanel.remove(Submit_Button);
+//                                    jPanel_TimerPanel.repaint();
+//                                    jPanel_TimerPanel.revalidate();
                                 }
                             }
                         }
@@ -285,6 +289,7 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jButton_Bitcoin = new javax.swing.JButton();
         jButton_Bitcoinkaufen = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         Background_TimerPanel = new javax.swing.JLabel();
         Hack_background = new javax.swing.JLabel();
 
@@ -344,7 +349,7 @@ public class TimerJframe extends javax.swing.JFrame {
         });
         jPanel_TimerPanel.add(jTextField_decryting, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 290, 40));
 
-        Back.setText("Back");
+        Back.setText("Zurueck");
         Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BackMouseClicked(evt);
@@ -519,6 +524,14 @@ public class TimerJframe extends javax.swing.JFrame {
         });
         jPanel_TimerPanel.add(jButton_Bitcoinkaufen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 290, 30));
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel_TimerPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, -1, -1));
+
         Background_TimerPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/timerbackgroundhack copy.gif"))); // NOI18N
         Background_TimerPanel.setText("jLabel3");
         jPanel_TimerPanel.add(Background_TimerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 625));
@@ -655,6 +668,10 @@ public class TimerJframe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_BitcoinkaufenActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -698,6 +715,7 @@ public class TimerJframe extends javax.swing.JFrame {
     private javax.swing.JLabel Hack_background;
     private javax.swing.JPanel MainJPanel;
     private javax.swing.JButton Submit_Button;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton_Bitcoin;
     private javax.swing.JButton jButton_Bitcoinkaufen;
     private javax.swing.JEditorPane jEditorPane1;

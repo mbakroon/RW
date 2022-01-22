@@ -53,6 +53,7 @@ public class MainMenu extends javax.swing.JFrame {
             jEditorPane3.setPage(getClass().getResource("../HTML/Report1.html"));
             jEditorPane4.setPage(getClass().getResource("../HTML/Report2.html"));
             jEditorPane5.setPage(getClass().getResource("../HTML/Team.html"));
+            jEditorPane6.setPage(getClass().getResource("../HTML/ProjecktInfo_SideBar.html"));
             jEditorPane6.setVisible(false);
 
         } catch (IOException ex) {
@@ -76,7 +77,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel_SideBar = new javax.swing.JPanel();
         jPanel_sicherheit = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        ReportLabelSidebar1 = new javax.swing.JLabel();
+        SicherHeitjLabel = new javax.swing.JLabel();
         jPanel_Six_hour = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         demo_six_hour = new javax.swing.JLabel();
@@ -171,16 +172,16 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/protect-40.png"))); // NOI18N
         jPanel_sicherheit.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 4, 40, 30));
 
-        ReportLabelSidebar1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        ReportLabelSidebar1.setForeground(new java.awt.Color(255, 255, 255));
-        ReportLabelSidebar1.setText("Sicherheit Massname");
-        ReportLabelSidebar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ReportLabelSidebar1.addMouseListener(new java.awt.event.MouseAdapter() {
+        SicherHeitjLabel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        SicherHeitjLabel.setForeground(new java.awt.Color(255, 255, 255));
+        SicherHeitjLabel.setText("Sicherheit Massname");
+        SicherHeitjLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SicherHeitjLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ReportLabelSidebar1MouseClicked(evt);
+                SicherHeitjLabelMouseClicked(evt);
             }
         });
-        jPanel_sicherheit.add(ReportLabelSidebar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
+        jPanel_sicherheit.add(SicherHeitjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
 
         jPanel_SideBar.add(jPanel_sicherheit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 210, 40));
 
@@ -545,11 +546,14 @@ public class MainMenu extends javax.swing.JFrame {
                 @Override
                 public void run() {
                     try {
+                        jEditorPane6.setVisible(true);
+
                         for (int i = 210; i >= 0; i--) {
                             Thread.sleep(1);
                             jPanel_SideBar.setSize(i, 570);
 
                             OP_CloseSideBar.setBackground(new java.awt.Color(255, 255, 255));
+
                         }
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(null, e);
@@ -564,10 +568,14 @@ public class MainMenu extends javax.swing.JFrame {
                 @Override
                 public void run() {
                     try {
+
                         for (int i = 0; i <= x; i++) {
                             th.sleep(1);
                             jPanel_SideBar.setSize(i, 570);
                         }
+                        jEditorPane6.setVisible(false);
+
+
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(null, e);
                     }
@@ -575,12 +583,6 @@ public class MainMenu extends javax.swing.JFrame {
             };
             th.start();
             x = 210;
-        }
-        try {
-            jEditorPane6.setVisible(true);
-            jEditorPane6.setPage(getClass().getResource("../HTML/ProjecktInfo_SideBar.html"));
-        } catch (IOException ex) {
-            Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
         }
 
 
@@ -644,7 +646,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_ReportLabelSidebarMouseClicked
 
     private void jButton_report1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_report1ActionPerformed
-        // TODO add your handling code here:
+        // Next Button:
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
@@ -656,7 +658,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton_report1ActionPerformed
 
-    private void ReportLabelSidebar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportLabelSidebar1MouseClicked
+    private void SicherHeitjLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SicherHeitjLabelMouseClicked
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
@@ -664,9 +666,10 @@ public class MainMenu extends javax.swing.JFrame {
         dynamicPanel.add(sicherheit);
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
-    }//GEN-LAST:event_ReportLabelSidebar1MouseClicked
+    }//GEN-LAST:event_SicherHeitjLabelMouseClicked
 
     private void jButton_report2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_report2ActionPerformed
+        //Button Report 2
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
         dynamicPanel.revalidate();
@@ -677,13 +680,13 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_report2ActionPerformed
 
     private void jPanel_ReportMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel_ReportMouseClicked
-        dynamicPanel.removeAll();
-        dynamicPanel.repaint();
-        dynamicPanel.revalidate();
-
-        dynamicPanel.add(Report1);
-        dynamicPanel.repaint();
-        dynamicPanel.revalidate();
+//        dynamicPanel.removeAll();
+//        dynamicPanel.repaint();
+//        dynamicPanel.revalidate();
+//
+//        dynamicPanel.add(Report1);
+//        dynamicPanel.repaint();
+//        dynamicPanel.revalidate();
     }//GEN-LAST:event_jPanel_ReportMouseClicked
 
     /**
@@ -739,7 +742,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel ReportLabel3;
     private javax.swing.JLabel ReportLabel4;
     private javax.swing.JLabel ReportLabelSidebar;
-    private javax.swing.JLabel ReportLabelSidebar1;
+    private javax.swing.JLabel SicherHeitjLabel;
     private javax.swing.JLabel TeamImg1;
     private javax.swing.JLabel TeamImg2;
     private javax.swing.JLabel TeamImg3;

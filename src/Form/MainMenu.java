@@ -172,7 +172,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/protect-40.png"))); // NOI18N
         jPanel_sicherheit.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 4, 40, 30));
 
-        SicherHeitjLabel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        SicherHeitjLabel.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         SicherHeitjLabel.setForeground(new java.awt.Color(255, 255, 255));
         SicherHeitjLabel.setText("Sicherheit Massname");
         SicherHeitjLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -234,7 +234,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         MembersLabelSidebar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         MembersLabelSidebar.setForeground(new java.awt.Color(255, 255, 255));
-        MembersLabelSidebar.setText("Members");
+        MembersLabelSidebar.setText("Teammitglieder");
         MembersLabelSidebar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MembersLabelSidebar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -299,7 +299,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Copyright @ Mohammed Bakroon");
+        jLabel15.setText("Copyright @ Palladium Gruppe");
         jPanel_SideBar.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 470, 200, 20));
 
         MainJPanel.add(jPanel_SideBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 55, 210, 570));
@@ -581,7 +581,6 @@ public class MainMenu extends javax.swing.JFrame {
             th.start();
             x = 210;
             jEditorPane6.setVisible(false);
-
         }
 
 

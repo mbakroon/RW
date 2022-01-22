@@ -7,8 +7,11 @@
 package Form;
 
 import Decrypt_Encrypt.ReadFile;
+import java.awt.Desktop;
 import java.io.IOException;
 import static java.lang.Thread.sleep;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -280,6 +283,8 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jButton_Bitcoin = new javax.swing.JButton();
+        jButton_Bitcoinkaufen = new javax.swing.JButton();
         Background_TimerPanel = new javax.swing.JLabel();
         Hack_background = new javax.swing.JLabel();
 
@@ -498,6 +503,22 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel_TimerPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 400, 90));
 
+        jButton_Bitcoin.setText("Was ist Bitcoin ?!");
+        jButton_Bitcoin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_BitcoinActionPerformed(evt);
+            }
+        });
+        jPanel_TimerPanel.add(jButton_Bitcoin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 290, 30));
+
+        jButton_Bitcoinkaufen.setText("Wie man Bitcoin kauft ?");
+        jButton_Bitcoinkaufen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_BitcoinkaufenActionPerformed(evt);
+            }
+        });
+        jPanel_TimerPanel.add(jButton_Bitcoinkaufen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 290, 30));
+
         Background_TimerPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/timerbackgroundhack copy.gif"))); // NOI18N
         Background_TimerPanel.setText("jLabel3");
         jPanel_TimerPanel.add(Background_TimerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 625));
@@ -612,6 +633,28 @@ public class TimerJframe extends javax.swing.JFrame {
       
     }//GEN-LAST:event_Submit_ButtonActionPerformed
 
+    private void jButton_BitcoinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BitcoinActionPerformed
+        try {
+            Desktop browser = Desktop.getDesktop();
+            browser.browse(new URI("https://de.wikipedia.org/wiki/Bitcoin"));
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(TimerJframe.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(TimerJframe.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton_BitcoinActionPerformed
+
+    private void jButton_BitcoinkaufenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BitcoinkaufenActionPerformed
+        try {
+            Desktop browser = Desktop.getDesktop();
+            browser.browse(new URI("https://www.handelsblatt.com/vergleich/bitcoin-kaufen/"));
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(TimerJframe.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(TimerJframe.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton_BitcoinkaufenActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -655,6 +698,8 @@ public class TimerJframe extends javax.swing.JFrame {
     private javax.swing.JLabel Hack_background;
     private javax.swing.JPanel MainJPanel;
     private javax.swing.JButton Submit_Button;
+    private javax.swing.JButton jButton_Bitcoin;
+    private javax.swing.JButton jButton_Bitcoinkaufen;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;

@@ -540,14 +540,13 @@ public class MainMenu extends javax.swing.JFrame {
     Thread th;
     private void OP_CloseSideBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OP_CloseSideBarMouseClicked
         if (x == 210) {
+            jEditorPane6.setVisible(true);
             jPanel_SideBar.setSize(210, 570);
 
             th = new Thread() {
                 @Override
                 public void run() {
                     try {
-                        jEditorPane6.setVisible(true);
-
                         for (int i = 210; i >= 0; i--) {
                             Thread.sleep(1);
                             jPanel_SideBar.setSize(i, 570);
@@ -573,8 +572,6 @@ public class MainMenu extends javax.swing.JFrame {
                             th.sleep(1);
                             jPanel_SideBar.setSize(i, 570);
                         }
-                        jEditorPane6.setVisible(false);
-
 
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(null, e);
@@ -583,6 +580,8 @@ public class MainMenu extends javax.swing.JFrame {
             };
             th.start();
             x = 210;
+            jEditorPane6.setVisible(false);
+
         }
 
 

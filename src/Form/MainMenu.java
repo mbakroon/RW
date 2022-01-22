@@ -370,6 +370,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         MainJPanel.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 55));
 
+        dynamicPanel.setPreferredSize(new java.awt.Dimension(790, 570));
+
         Dashboard.setPreferredSize(new java.awt.Dimension(790, 570));
 
         jScrollPane2.setBorder(null);

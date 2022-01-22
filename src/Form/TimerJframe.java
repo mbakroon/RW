@@ -295,6 +295,7 @@ public class TimerJframe extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setUndecorated(true);
 
         MainJPanel.setBackground(new java.awt.Color(204, 204, 255));
         MainJPanel.setMinimumSize(new java.awt.Dimension(1000, 625));
@@ -524,13 +525,13 @@ public class TimerJframe extends javax.swing.JFrame {
         });
         jPanel_TimerPanel.add(jButton_Bitcoinkaufen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 290, 30));
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Kostenlose Dateientschluesseln");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel_TimerPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, -1, -1));
+        jPanel_TimerPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 290, -1));
 
         Background_TimerPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/timerbackgroundhack copy.gif"))); // NOI18N
         Background_TimerPanel.setText("jLabel3");

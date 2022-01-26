@@ -5,11 +5,17 @@
  */
 package Form;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import jdk.internal.loader.Loader;
 
 /**
  *
@@ -47,7 +53,19 @@ public class MainMenu extends javax.swing.JFrame {
     //for Text in JEditorPanel
     public void setTextAria() {
 
+        /*
+        File file = new File("../HTML/startseite.html");
+        FileInputStream stream = new FileInputStream(file);
+        int data = stream.read();
+        while(data != -1) {
+            data = stream.read(); // read next byte
+        }*/
+        
         try {
+            //URL test1 = getClass().getResource("///HTML/startseite.html");
+            //URL test1 = new URL("../HTML/startseite.html");
+            //URL test1 = getClass().getClassLoader().getResource("../HTML/startseite.html");
+            
             jEditorPane2.setPage(getClass().getResource("../HTML/startseite.html"));
             jEditorPane1.setPage(getClass().getResource("../HTML/Sicherheit.html"));
             jEditorPane3.setPage(getClass().getResource("../HTML/Report1.html"));

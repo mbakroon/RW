@@ -24,7 +24,7 @@ import jdk.internal.loader.Loader;
 public class MainMenu extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainMenu
+     * Creates new form MainMenu kkk
      *
      */
     // This is mainmenu class

@@ -15,13 +15,14 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.ScrollPaneConstants;
 
 /**
  *
- * @author Mohammed Bakroon nss
+ * @author Mohammed Bakroon
  */
 
 
@@ -41,6 +42,8 @@ public class TimerJframe extends javax.swing.JFrame {
     int index = 0;
     int fileCounter = ReadFile.readFileCountPaths();
     private boolean isEncrypted[] = new boolean[fileCounter];
+    private final int[] xPos;
+    private final int[] yPos;
 
     /**
      * Creates new form MainMenu
@@ -48,6 +51,9 @@ public class TimerJframe extends javax.swing.JFrame {
     public boolean showHackBackground = true;
 
     public TimerJframe() {
+        this.xPos = new int[]{830-400,535-400,1280-400,955-400,995-400,645-400,460-400};
+        this.yPos = new int[]{310-255,510-215,265-215,725-215,765-215,550-215,0};
+        Tutorial tutorial = new Tutorial(xPos,yPos);
         initComponents();
         this.setResizable(false);
         startDecription();

@@ -324,6 +324,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jScrollPane4.setBorder(null);
 
+        jEditorPane6.setEditable(false);
         jEditorPane6.setBorder(null);
         jScrollPane4.setViewportView(jEditorPane6);
 
@@ -396,6 +397,7 @@ public class MainMenu extends javax.swing.JFrame {
         jScrollPane2.setAlignmentX(0.0F);
         jScrollPane2.setAlignmentY(0.0F);
 
+        jEditorPane2.setEditable(false);
         jEditorPane2.setBorder(null);
         jScrollPane2.setViewportView(jEditorPane2);
 
@@ -443,6 +445,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jScrollPane1.setBorder(null);
 
+        jEditorPane5.setEditable(false);
         jEditorPane5.setBorder(null);
         jScrollPane1.setViewportView(jEditorPane5);
 
@@ -473,6 +476,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jScrollPanel_report2.setBorder(null);
 
+        jEditorPane4.setEditable(false);
         jEditorPane4.setBorder(null);
         jScrollPanel_report2.setViewportView(jEditorPane4);
 
@@ -490,6 +494,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jScrollPanel_report1.setBorder(null);
 
+        jEditorPane3.setEditable(false);
         jEditorPane3.setBorder(null);
         jScrollPanel_report1.setViewportView(jEditorPane3);
 
@@ -500,6 +505,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jScrollPane3.setBorder(null);
 
+        jEditorPane1.setEditable(false);
         jEditorPane1.setBorder(null);
         jScrollPane3.setViewportView(jEditorPane1);
 

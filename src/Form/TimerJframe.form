@@ -242,7 +242,7 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="skipTimer_Button" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="8" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -400,6 +400,9 @@
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
                     <Component class="javax.swing.JEditorPane" name="jEditorPane1">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JEditorPane()"/>
                         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="String strHTML = &quot;&lt;div style= color:red ; font-size. 40px&gt;Was passiert mit meinem Computer&lt;/div&gt;&quot;;"/>

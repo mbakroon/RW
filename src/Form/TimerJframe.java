@@ -472,12 +472,13 @@ public class TimerJframe extends javax.swing.JFrame {
                             .addComponent(jLabel16))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(skipTimer_Button)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel_TimerPanel.add(jPanel_timerBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 290, 170));
 
         String strHTML = "<div style= color:red ; font-size. 40px>Was passiert mit meinem Computer</div>";
+        jEditorPane1.setEditable(false);
         jScrollPane1.setViewportView(jEditorPane1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

@@ -587,7 +587,16 @@ public class TimerJframe extends javax.swing.JFrame {
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         // TODO add your handling code here:
-        ReadFile.readFileToDecrypt(key);
+        
+        int i = 0;
+        
+        while((i < fileCounter) && (isEncrypted[i] == true)){
+                
+                ReadFile.readFileDecryptOneByOne(key, i);
+                i++;
+                
+        }   
+        
     }//GEN-LAST:event_BackActionPerformed
 
     private void skipTimer_ButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_skipTimer_ButtonMousePressed
@@ -619,13 +628,14 @@ public class TimerJframe extends javax.swing.JFrame {
             ProgressBar.getProgressBar().setValue(100);
 
         }
+        
         for (int i = 0; i < fileCounter; i++) {
             if (isEncrypted[i] == false) {
                 ReadFile.readFileEncryptOneByOne(key, i);
+                isEncrypted[i] = true;
             }
         }
-
-
+        
     }//GEN-LAST:event_skipTimer_ButtonMousePressed
 
     private void Submit_ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Submit_ButtonMouseClicked
@@ -637,9 +647,20 @@ public class TimerJframe extends javax.swing.JFrame {
         th_startTimer.stop();
         //Decpytion
         if (evt.getSource() == Submit_Button) {
+            
             String input = jTextField_decryting.getText();
+            
             if (input.equals("BitteEntsperren!")) {
-                ReadFile.readFileToDecrypt(input);
+            
+                for (int i = 0; i < fileCounter; i++) {
+                
+                    if (isEncrypted[i] == true) {
+                    
+                        ReadFile.readFileDecryptOneByOne(key, i);
+                        
+                        isEncrypted[i] = false;
+            }
+        }
 
             }
         }

@@ -192,7 +192,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         SicherHeitjLabel.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         SicherHeitjLabel.setForeground(new java.awt.Color(255, 255, 255));
-        SicherHeitjLabel.setText("Sicherheit Massname");
+        SicherHeitjLabel.setText("Sicherheitsmaßnahmen");
         SicherHeitjLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         SicherHeitjLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -649,16 +649,6 @@ public class MainMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_DashboardLabelSideBarMouseClicked
 
-    private void CollectionLabelSideBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CollectionLabelSideBarMouseClicked
-        dynamicPanel.removeAll();
-        dynamicPanel.repaint();
-        dynamicPanel.revalidate();
-
-        dynamicPanel.add(Collections);
-        dynamicPanel.repaint();
-        dynamicPanel.revalidate();
-    }//GEN-LAST:event_CollectionLabelSideBarMouseClicked
-
     private void ReportLabelSidebarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportLabelSidebarMouseClicked
         dynamicPanel.removeAll();
         dynamicPanel.repaint();
@@ -712,6 +702,16 @@ public class MainMenu extends javax.swing.JFrame {
 //        dynamicPanel.repaint();
 //        dynamicPanel.revalidate();
     }//GEN-LAST:event_jPanel_ReportMouseClicked
+
+    private void CollectionLabelSideBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CollectionLabelSideBarMouseClicked
+        dynamicPanel.removeAll();
+        dynamicPanel.repaint();
+        dynamicPanel.revalidate();
+
+        dynamicPanel.add(Collections);
+        dynamicPanel.repaint();
+        dynamicPanel.revalidate();
+    }//GEN-LAST:event_CollectionLabelSideBarMouseClicked
 
     /**
      * @param args the command line arguments

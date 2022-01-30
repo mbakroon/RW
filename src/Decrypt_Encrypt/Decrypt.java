@@ -18,9 +18,8 @@ public class Decrypt {
 			// Construct a secret key from a byte array
 			SecretKeySpec secretKey = new SecretKeySpec(key.getBytes(), "AES");
 			
-			// Create cryptographic cipher and pass Transformation (e.g. with padding etc)
-			// Here default!
-			Cipher cipher = Cipher.getInstance("AES");
+			// Create cryptographic cipher and pass Transformation (e.g. ECB mode with padding etc)
+			Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
 			
 			// Initialize cipher to encryption mode
 			cipher.init(Cipher.DECRYPT_MODE, secretKey);

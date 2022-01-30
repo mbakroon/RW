@@ -196,9 +196,9 @@ public class MainMenu extends javax.swing.JFrame {
                 SicherHeitjLabelMouseClicked(evt);
             }
         });
-        jPanel_sicherheit.add(SicherHeitjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
+        jPanel_sicherheit.add(SicherHeitjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 150, 20));
 
-        jPanel_SideBar.add(jPanel_sicherheit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 210, 40));
+        jPanel_SideBar.add(jPanel_sicherheit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 210, 40));
 
         jPanel_Six_hour.setBackground(new java.awt.Color(54, 70, 78));
         jPanel_Six_hour.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -283,7 +283,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel_Report.add(ReportLabelSidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
 
-        jPanel_SideBar.add(jPanel_Report, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 210, 40));
+        jPanel_SideBar.add(jPanel_Report, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 210, 40));
 
         jLabel14.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));

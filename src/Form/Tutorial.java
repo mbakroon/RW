@@ -67,12 +67,16 @@ public Tutorial(int[] xPos, int[] yPos) {
             @Override
             public void mouseClicked(MouseEvent me) {
                 if (i < 7) {
-                    if (i == 0 || i == 1 || i == 5){
+                    if (i == 0 || i == 1 || i == 4){
                         lowerLabel.setFont(new Font("Lucida Bright", 1, 13));
                     } else if (i == 6) {
                         lowerLabel.setFont(new Font("Lucida Bright", 1, 10));
                     } else if (i == 3){
                         lowerLabel.setFont(new Font("Lucida Bright", 1, 12));
+                    } else if (i == 2){
+                        lowerLabel.setFont(new Font("Lucida Bright", 1, 13));
+                    } else if (i == 5){
+                        lowerLabel.setFont(new Font("Lucida Bright", 1, 14));
                     } else {
                         lowerLabel.setFont(new Font("Lucida Bright", 1, 16));
                     }
@@ -152,13 +156,13 @@ public void setArrayLists() {
         upperList.add("Demo Beschleunigen");//skipTimer_Button
         upperList.add("Zurück zum Menü");//Back
         lowerList = new ArrayList<String>();
-        lowerList.add("<html>Bevor Sie weiter klicken, sollten Sie sich den Erklärungstext durchgelesen haben, um sich über die potentiellen Sicherheitsrisiken bewusst zu werden.</html>");
-        lowerList.add("<html>Der Timer verrät, wie viel Zeit Sie noch haben, um das Lösegeld zahlen zu können. Danach würden im Ernstfall die verschlüsselten Daten für immer unzugänglich bleiben.</html>");
-        lowerList.add("<html>Die Dateien werden nacheinander alle 60 Sekunden verschlüsselt. In dieser Liste sehen Sie den Prozess.</html>");
-        lowerList.add("<html>Hier geben Sie bitte das Passwort “BitteEntsperren!“ in das Feld ein. Nach dem Bestätigen werden ihre Daten entschlüsselt. Im Ernstfall müssten Sie das Passwort für viel Geld kaufen.</html>");
-        lowerList.add("<html>Hier bestätigen Sie ihre Eingabe</html>");
-        lowerList.add("<html>Mit einem Klick starten Sie die Demo. Es werden dann alle (übrig gebliebenen) Dateien verschlüsselt und Sie haben nur noch 10 Sekunden Zeit um ihre Daten zu entschlüsseln.</html>");
-        lowerList.add("<html>Mit einem Klick gelangen Sie zurück ins Menü. Sie sind dort dazu eingeladen unsere anderen spannenden Inhalte zu beäugen. Doch bitte schauen Sie sich zuerst die Demo im Detail an und vergewissern Sie sich ob ihre Dateien in dem Ordner \"Wichtige Dokumente\" verschlüsselt worden sind.</html>");
+        lowerList.add("<html>Bitte lesen Sie sich den Erklärungstext durch, um sich über potentielle Sicherheitsrisiken bewusst zu werden.</html>");
+        lowerList.add("<html>Der Timer verrät, wie viel Zeit Sie noch haben, um das Lösegeld zu zahlen. Danach würden im Ernstfall die verschlüsselten Daten für immer verschlüsselt bleiben.</html>");
+        lowerList.add("<html>Die Dateien werden nacheinander alle 60 Sekunden verschlüsselt. Wenn der Balken auf 100 % ist, ist die Datei verschlüsselt.</html>");
+        lowerList.add("<html>Hier geben Sie bitte zum Entschlüsseln der Dateien den Schlüssel “BitteEntsperren!“ ein.</html>");
+        lowerList.add("<html>Bestätigen Sie Ihre Eingabe. Nach dem Bestätigen werden Ihre Daten entschlüsselt. Im Ernstfall müssten Sie für den Schlüssel Lösegeld bezahlen.</html>");
+        lowerList.add("<html>Mit einem Klick überspringen Sie die Demo. Es werden dabei alle (übrig gebliebenen) Dateien verschlüsselt. Der Timer läuft danach nur noch 10 Sekunden.</html>");
+        lowerList.add("<html>Mit einem Klick gelangen Sie zurück ins Menü. Sie sind dort dazu eingeladen unsere anderen spannenden Inhalte zu beäugen. Doch bitte schauen Sie sich zuerst die Demo im Detail an und vergewissern Sie sich ob Ihre Daten in dem Ordner \"meinSehrWichtigerOrdner\" verschlüsselt worden sind.</html>");
         imagePaths = new ArrayList<String>();
         imagePaths.add("/Icons/tut_read.png");
         imagePaths.add("/Icons/tut_timer2.png");

@@ -68,7 +68,7 @@ public class FirstPage extends javax.swing.JFrame {
                 closelabelMouseClicked(evt);
             }
         });
-        jPanel1.add(closelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 560, 70, 60));
+        jPanel1.add(closelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 560, 70, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/hacker1.gif"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 625));

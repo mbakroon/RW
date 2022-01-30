@@ -274,7 +274,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         ReportLabelSidebar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         ReportLabelSidebar.setForeground(new java.awt.Color(255, 255, 255));
-        ReportLabelSidebar.setText("Report");
+        ReportLabelSidebar.setText("Statistiken");
         ReportLabelSidebar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ReportLabelSidebar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -333,11 +333,11 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/hacking copy54x54.gif"))); // NOI18N
 
         jLabel24.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel24.setFont(new java.awt.Font("Big Caslon", 1, 18)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel24.setLabelFor(navBar);
-        jLabel24.setText("Ransomware Interaktive Lernumgebung ");
+        jLabel24.setText("Virtuelle interaktive Lernumgebung");
 
         jLabel25.setForeground(new java.awt.Color(204, 0, 0));
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/thief-hacker-locked-victim-compu.jpg"))); // NOI18N

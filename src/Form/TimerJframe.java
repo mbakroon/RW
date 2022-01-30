@@ -284,7 +284,6 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
@@ -294,7 +293,6 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jButton_Bitcoin = new javax.swing.JButton();
         jButton_Bitcoinkaufen = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         Background_TimerPanel = new javax.swing.JLabel();
         Hack_background = new javax.swing.JLabel();
 
@@ -330,7 +328,7 @@ public class TimerJframe extends javax.swing.JFrame {
         jScrollPane_ProgressBars.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
 
         Submit_Button.setBackground(java.awt.Color.lightGray);
-        Submit_Button.setText("Submit");
+        Submit_Button.setText("Bestätigen");
         Submit_Button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Submit_Button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -342,11 +340,11 @@ public class TimerJframe extends javax.swing.JFrame {
                 Submit_ButtonActionPerformed(evt);
             }
         });
-        jPanel_TimerPanel.add(Submit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 560, 100, 40));
+        jPanel_TimerPanel.add(Submit_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 560, 100, 40));
 
         jTextField_decryting.setBackground(new java.awt.Color(204, 204, 204));
         jTextField_decryting.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField_decryting.setText("Enter The Secret Key ");
+        jTextField_decryting.setText("Schlüssel eingeben");
         jTextField_decryting.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextField_decryting.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -355,7 +353,7 @@ public class TimerJframe extends javax.swing.JFrame {
         });
         jPanel_TimerPanel.add(jTextField_decryting, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 290, 40));
 
-        Back.setText("Zurueck");
+        Back.setText("Zurück");
         Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BackMouseClicked(evt);
@@ -405,20 +403,18 @@ public class TimerJframe extends javax.swing.JFrame {
         });
 
         jLabel2.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel2.setText("Min");
+        jLabel2.setText("Min.");
 
         jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("Hour");
+        jLabel5.setText("Std.");
 
         jLabel16.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel16.setText("Second");
+        jLabel16.setText("Sek.");
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel4.setText("dein Datei werden verschluesselt! ");
-
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("uebrige Zeit");
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Übrige Zeit");
 
         javax.swing.GroupLayout jPanel_timerBoxLayout = new javax.swing.GroupLayout(jPanel_timerBox);
         jPanel_timerBox.setLayout(jPanel_timerBoxLayout);
@@ -427,42 +423,38 @@ public class TimerJframe extends javax.swing.JFrame {
             .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_timerBoxLayout.createSequentialGroup()
                         .addComponent(jLabel_hour)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel_minute)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
-                                .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(skipTimer_Button)
-                                    .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
-                                        .addComponent(jLabel_minute)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel2)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel_seconds)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel_milisecond, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2)
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel_seconds)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel16))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel_milisecond, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
+                .addGap(122, 122, 122)
+                .addComponent(skipTimer_Button)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_timerBoxLayout.setVerticalGroup(
             jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_timerBoxLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_milisecond, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(10, 10, 10)
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel_milisecond, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel_timerBoxLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel_timerBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_hour)
                             .addComponent(jLabel5)
@@ -496,15 +488,15 @@ public class TimerJframe extends javax.swing.JFrame {
 
         jPanel_TimerPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 400, 420));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Ooops, dein Datei sind verschluesselt!");
-        jPanel_TimerPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 280, 20));
+        jLabel1.setText("Ooops, deine Daten werden verschlüsselt!");
+        jPanel_TimerPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 410, 20));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/lock.jpeg"))); // NOI18N
         jLabel3.setText("jLabel3");
         jLabel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel_TimerPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 280, 170));
+        jPanel_TimerPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 290, 170));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/bitCoin1 copy.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
@@ -515,7 +507,7 @@ public class TimerJframe extends javax.swing.JFrame {
         jLabel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel_TimerPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 400, 90));
 
-        jButton_Bitcoin.setText("Was ist Bitcoin ?!");
+        jButton_Bitcoin.setText("Was ist Bitcoin ?");
         jButton_Bitcoin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_BitcoinActionPerformed(evt);
@@ -523,21 +515,13 @@ public class TimerJframe extends javax.swing.JFrame {
         });
         jPanel_TimerPanel.add(jButton_Bitcoin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 290, 30));
 
-        jButton_Bitcoinkaufen.setText("Wie man Bitcoin kauft ?");
+        jButton_Bitcoinkaufen.setText("Wie kauft man Bitcoins ?");
         jButton_Bitcoinkaufen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_BitcoinkaufenActionPerformed(evt);
             }
         });
         jPanel_TimerPanel.add(jButton_Bitcoinkaufen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 290, 30));
-
-        jButton1.setText("Kostenlose Dateientschluesseln");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel_TimerPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 290, -1));
 
         Background_TimerPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/timerbackgroundhack copy.gif"))); // NOI18N
         Background_TimerPanel.setText("jLabel3");
@@ -696,10 +680,6 @@ public class TimerJframe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_BitcoinkaufenActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -743,7 +723,6 @@ public class TimerJframe extends javax.swing.JFrame {
     private javax.swing.JLabel Hack_background;
     private javax.swing.JPanel MainJPanel;
     private javax.swing.JButton Submit_Button;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton_Bitcoin;
     private javax.swing.JButton jButton_Bitcoinkaufen;
     private javax.swing.JEditorPane jEditorPane1;
@@ -753,7 +732,6 @@ public class TimerJframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     public javax.swing.JLabel jLabel_hour;

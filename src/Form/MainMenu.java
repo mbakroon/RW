@@ -108,9 +108,6 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel_Report = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         ReportLabelSidebar = new javax.swing.JLabel();
-        jPanel_Collections = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        CollectionLabelSideBar = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         sideBarText = new javax.swing.JPanel();
@@ -287,26 +284,6 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel_Report.add(ReportLabelSidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
 
         jPanel_SideBar.add(jPanel_Report, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 210, 40));
-
-        jPanel_Collections.setBackground(new java.awt.Color(54, 70, 78));
-        jPanel_Collections.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-survey-23.png"))); // NOI18N
-        jPanel_Collections.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 4, 40, 30));
-
-        CollectionLabelSideBar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        CollectionLabelSideBar.setForeground(new java.awt.Color(255, 255, 255));
-        CollectionLabelSideBar.setText("Collections");
-        CollectionLabelSideBar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CollectionLabelSideBar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CollectionLabelSideBarMouseClicked(evt);
-            }
-        });
-        jPanel_Collections.add(CollectionLabelSideBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 140, 20));
-
-        jPanel_SideBar.add(jPanel_Collections, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 210, 40));
 
         jLabel14.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -703,16 +680,6 @@ public class MainMenu extends javax.swing.JFrame {
 //        dynamicPanel.revalidate();
     }//GEN-LAST:event_jPanel_ReportMouseClicked
 
-    private void CollectionLabelSideBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CollectionLabelSideBarMouseClicked
-        dynamicPanel.removeAll();
-        dynamicPanel.repaint();
-        dynamicPanel.revalidate();
-
-        dynamicPanel.add(Collections);
-        dynamicPanel.repaint();
-        dynamicPanel.revalidate();
-    }//GEN-LAST:event_CollectionLabelSideBarMouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -751,7 +718,6 @@ public class MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CollectionLabel2;
-    private javax.swing.JLabel CollectionLabelSideBar;
     private javax.swing.JPanel Collections;
     private javax.swing.JPanel Dashboard;
     private javax.swing.JLabel DashboardLabelSideBar;
@@ -785,7 +751,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel23;
@@ -796,7 +761,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel_Collections;
     private javax.swing.JPanel jPanel_Dashboard;
     private javax.swing.JPanel jPanel_Members;
     private javax.swing.JPanel jPanel_Report;

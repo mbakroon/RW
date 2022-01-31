@@ -44,6 +44,7 @@ public class TimerJframe extends javax.swing.JFrame {
     private boolean isEncrypted[] = new boolean[fileCounter];
     private final int[] xPos;
     private final int[] yPos;
+    private Tutorial tutorial;
 
     /**
      * Creates new form MainMenu
@@ -53,11 +54,12 @@ public class TimerJframe extends javax.swing.JFrame {
     public TimerJframe() {
         this.xPos = new int[]{830-400,535-400,1280-400,955-400,995-400,645-400,460-400};
         this.yPos = new int[]{310-255,510-215,265-215,725-215,765-215,550-215,0};
-        Tutorial tutorial = new Tutorial(xPos,yPos);
+        tutorial = new Tutorial(xPos,yPos);
         initComponents();
         this.setResizable(false);
         startDecription();
         setTextAria();
+        
 
     }
     //for Text in JEditorPanel
@@ -580,7 +582,7 @@ public class TimerJframe extends javax.swing.JFrame {
                 i++;
                 
         }   
-        
+        tutorial.setVisible(false);
     }//GEN-LAST:event_BackActionPerformed
 
     private void skipTimer_ButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_skipTimer_ButtonMousePressed

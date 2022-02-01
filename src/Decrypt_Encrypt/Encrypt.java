@@ -5,6 +5,10 @@ import java.io.FileOutputStream;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
+/**
+ *
+ * @author Stefan Kresovic
+ */
 
 public class Encrypt {
         private static final String key = "BitteEntsperren!";

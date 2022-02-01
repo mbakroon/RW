@@ -7,6 +7,11 @@ import java.io.FileOutputStream;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
+/**
+ *
+ * @author Stefan Kresovic
+ */
+
 public class Decrypt {
         private static final String key = "BitteEntsperren!";
 

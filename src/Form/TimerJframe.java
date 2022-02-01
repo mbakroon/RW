@@ -138,8 +138,10 @@ public class TimerJframe extends javax.swing.JFrame {
                         if (second <= 0) {
                             second = 60;
                             minute--;
-                            ReadFile.readFileEncryptOneByOne(key, index);
-                            if(index<5){
+                            
+                            if(index < fileCounter){
+                                
+                                ReadFile.readFileEncryptOneByOne(key, index);
                                 isEncrypted[index] = true;
                                 index++; 
                             }
@@ -579,6 +581,7 @@ public class TimerJframe extends javax.swing.JFrame {
         while((i < fileCounter) && (isEncrypted[i] == true)){
                 
                 ReadFile.readFileDecryptOneByOne(key, i);
+                isEncrypted[i] = false;
                 i++;
                 
         }   
